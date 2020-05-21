@@ -1,0 +1,159 @@
+newmtl Wraith_Raider_Starship:default1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd vj2c.jpg
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_blue_joystick
+illum 4
+Kd 0.20 0.69 1.00
+Ka 0.38 0.49 1.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_cockpit
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd cockpit_mtl1_diffcol.jpg
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_couplers
+illum 4
+Kd 0.50 1.00 0.00
+Ka 0.50 1.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_cushion
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd yx1_02_01_01.jpg
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_displays
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_door
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_green
+illum 4
+Kd 0.50 1.00 0.00
+Ka 0.50 1.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_lights
+illum 4
+Kd 0.50 1.00 1.00
+Ka 0.50 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_propulsion
+illum 4
+Kd 0.50 1.00 1.00
+Ka 0.50 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_red
+illum 4
+Kd 1.00 0.00 0.00
+Ka 1.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_red_joystick
+illum 4
+Kd 1.00 0.00 0.00
+Ka 1.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_windshield_glass
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.80 0.80 0.80
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_1_windshield_liner
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_2_door
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd door_mtl2_diffcol.jpg
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_3
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd bmq1.jpg
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_5
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd d10.jpg
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
+newmtl Wraith_Raider_Starship:material_7
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd d17.jpg
+Ni 0.00
+Ks 1.00 1.00 1.00
+Ns 1.00
