@@ -42,9 +42,19 @@ class Terrain:
 
     # Texture unit allocaitons:
     TU_Grass = 0
+    # 2.1
+    TU_High = 1
+    TU_Steep = 2
+    TU_Road = 3
+    TU_Map = 4
 
     # 1.4
     grassTexture = None
+    # 2.1
+    highTexture = None
+    steepTexture = None
+    roadTexture = None
+    mapTexture = None
 
     def render(self, view, renderingSystem):
         glUseProgram(self.shader)
@@ -60,6 +70,20 @@ class Terrain:
         #TODO 1.4: Bind the grass texture to the right texture unit, hint: lu.bindTexture
         lu.bindTexture(self.TU_Grass, self.grassTexture)
         lu.setUniform(self.shader, "grassTexture", self.TU_Grass)
+
+        # 2.1
+        # High
+        lu.bindTexture(self.TU_High, self.highTexture)
+        lu.setUniform(self.shader, "highTexture", self.TU_High)
+        # Steep
+        lu.bindTexture(self.TU_Steep, self.steepTexture)
+        lu.setUniform(self.shader, "steepTexture", self.TU_Steep)
+        # Road
+        lu.bindTexture(self.TU_Road, self.roadTexture)
+        lu.bindTexture(self.TU_Map, self.mapTexture)
+        lu.setUniform(self.shader, "roadTexture", self.TU_Road)
+        lu.setUniform(self.shader, "mapTexture", self.TU_Map)
+
 
         if self.renderWireFrame:
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -196,6 +220,11 @@ class Terrain:
                 vec3 v2f_viewSpacePosition;
                 vec3 v2f_viewSpaceNormal;
                 vec3 v2f_worldSpacePosition;
+                vec3 v2f_worldSpaceNormal; // 2.1 - Steep
+
+                vec2 v2f_xyNormScale; // 2.1 - Road
+                vec2 v2f_xyOffset; // 2.1 - Road
+
             };
 
             void main() 
@@ -205,6 +234,10 @@ class Terrain:
                 v2f_worldSpacePosition = positionIn;
                 v2f_viewSpacePosition = (modelToViewTransform * vec4(positionIn, 1.0)).xyz;
                 v2f_viewSpaceNormal = modelToViewNormalTransform * normalIn;
+
+                v2f_worldSpaceNormal = normalIn; //2.1 - Steep
+                v2f_xyNormScale = xyNormScale; // 2.1 - Road
+                v2f_xyOffset = xyOffset; // 2.1 - Road
 
 	            // gl_Position is a buit-in 'out'-variable that gets passed on to the clipping and rasterization stages (hardware fixed function).
                 // it must be written by the vertex shader in order to produce any drawn geometry. 
@@ -223,22 +256,51 @@ class Terrain:
                 vec3 v2f_viewSpacePosition;
                 vec3 v2f_viewSpaceNormal;
                 vec3 v2f_worldSpacePosition;
+
+                vec3 v2f_worldSpaceNormal;  //2.1 - Steep
+                vec2 v2f_xyNormScale; // 2.1 - Road
+                vec2 v2f_xyOffset; // 2.1 - Road
             };
 
             uniform float terrainHeightScale;
             uniform float terrainTextureXyScale;
-
-            uniform sampler2D grassTexture; // 1.4
+            // 1.4
+            uniform sampler2D grassTexture; 
+            // 2.1
+            uniform sampler2D highTexture;
+            uniform sampler2D steepTexture;   
+            uniform sampler2D roadTexture;
+            uniform sampler2D mapTexture;
 
             out vec4 fragmentColor;
 
             void main() 
             {
                 vec3 materialColour = vec3(v2f_height/terrainHeightScale);
-                // TODO 1.4: Compute the texture coordinates and sample the texture for the grass and use as material colour. 
-                
-                vec3 grassColour = texture(grassTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz; //1.4
+                // TODO 1.4: Compute the texture coordinates and sample the texture for the grass and use as material colour.                 
+                vec3 grassColour = texture(grassTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
                 materialColour = grassColour;
+
+                // 2.1                 
+                float slope = dot(v2f_worldSpaceNormal, vec3(v2f_worldSpaceNormal.x, 0.0, v2f_worldSpaceNormal.z)); //Steep 
+                float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy - v2f_xyOffset) * v2f_xyNormScale).z; //Road
+
+                // Road Texture
+                if (blueChannel >= 0.9) {
+                    vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
+                    materialColour = roadColour;
+                // Steep texture
+                } else if (slope < 0.8) {
+                    vec3 steepColour = texture(steepTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
+                    materialColour = mix(materialColour, steepColour, (v2f_height/terrainHeightScale));                
+                // High texture
+                } else if (v2f_height > 60) {
+                    vec3 highColour = texture(highTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
+                    materialColour = mix(materialColour, highColour, (v2f_height/terrainHeightScale));
+                }
+
+                
+
 
                 vec3 reflectedLight = computeShading(materialColour, v2f_viewSpacePosition, v2f_viewSpaceNormal, viewSpaceLightPosition, sunLightColour);
 	            fragmentColor = vec4(toSrgb(reflectedLight), 1.0);
@@ -254,6 +316,13 @@ class Terrain:
         
         # TODO 1.4: Load texture and configure the sampler
         self.grassTexture = ObjModel.loadTexture("grass2.png", "data", True)
+
+        # 2.1
+        self.highTexture = ObjModel.loadTexture("rock 2.png", "data", True)
+        self.steepTexture = ObjModel.loadTexture("rock 5.png", "data", True)
+
+        self.roadTexture = ObjModel.loadTexture("paving 5.png", "data", True)
+        self.mapTexture = ObjModel.loadTexture("track_01_128.png", "data", False)
 
 
     # Called by the game to drawt he UI widgets for the terrain.
