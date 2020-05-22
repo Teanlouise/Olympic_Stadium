@@ -2,7 +2,8 @@
 \contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
 \contentsline {section}{\numberline {2}Mega Racer - Tier 1}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}1.1 - Scale the terrain grid}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}1.2 - Set up a camera to follow the racer}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}1.2 - Set up a camera to follow the racer}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}1.3 - Place and orient a model for the racer}{7}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}1.4 - Texture the terrain}{8}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}1.5 Lighting from the sun}{11}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.4}1.4 - Texture the terrain}{9}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}1.5 Lighting from the sun}{12}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}2.1 Improve terrain textures}{17}{subsection.2.6}%

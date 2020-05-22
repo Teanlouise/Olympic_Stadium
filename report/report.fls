@@ -221,6 +221,7 @@ OUTPUT f:\TEAN\Portfolio\mega_racer\report\report.lof
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT images\1.1.PNG
 INPUT .\images\1.1.PNG
@@ -228,7 +229,6 @@ INPUT .\images\1.1.PNG
 INPUT .\images\1.1.PNG
 INPUT .\images\1.1.PNG
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omlcmr.fd
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omlcmr.fd
 INPUT images\1.2_a.PNG
@@ -283,6 +283,12 @@ INPUT .\images\1.5_d_2.PNG
 INPUT .\images\1.5_d_2.PNG
 INPUT .\images\1.5_d_2.PNG
 INPUT .\images\1.5_d_2.PNG
+INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT images\1.5_e_1.PNG
 INPUT .\images\1.5_e_1.PNG
 INPUT .\images\1.5_e_1.PNG
@@ -293,6 +299,36 @@ INPUT .\images\1.5_e_2.PNG
 INPUT .\images\1.5_e_2.PNG
 INPUT .\images\1.5_e_2.PNG
 INPUT .\images\1.5_e_2.PNG
+INPUT images\2.1_a.PNG
+INPUT .\images\2.1_a.PNG
+INPUT .\images\2.1_a.PNG
+INPUT .\images\2.1_a.PNG
+INPUT .\images\2.1_a.PNG
+INPUT images\2.1_b.PNG
+INPUT .\images\2.1_b.PNG
+INPUT .\images\2.1_b.PNG
+INPUT .\images\2.1_b.PNG
+INPUT .\images\2.1_b.PNG
+INPUT images\2.1_c_1.PNG
+INPUT .\images\2.1_c_1.PNG
+INPUT .\images\2.1_c_1.PNG
+INPUT .\images\2.1_c_1.PNG
+INPUT .\images\2.1_c_1.PNG
+INPUT images\2.1_c_2.PNG
+INPUT .\images\2.1_c_2.PNG
+INPUT .\images\2.1_c_2.PNG
+INPUT .\images\2.1_c_2.PNG
+INPUT .\images\2.1_c_2.PNG
+INPUT images\2.1_c_3.PNG
+INPUT .\images\2.1_c_3.PNG
+INPUT .\images\2.1_c_3.PNG
+INPUT .\images\2.1_c_3.PNG
+INPUT .\images\2.1_c_3.PNG
+INPUT images\2.1_c_final.PNG
+INPUT .\images\2.1_c_final.PNG
+INPUT .\images\2.1_c_final.PNG
+INPUT .\images\2.1_c_final.PNG
+INPUT .\images\2.1_c_final.PNG
 INPUT f:\TEAN\Portfolio\mega_racer\report\report.aux
 INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
 INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
