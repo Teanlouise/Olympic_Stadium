@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.4.7)  22 MAY 2020 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.4.7)  23 MAY 2020 18:15
 entering extended mode
 **f:/TEAN/Portfolio/mega_racer/report/report.tex
 (f:/TEAN/Portfolio/mega_racer/report/report.tex
@@ -570,7 +570,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 68.
-<./images/title.png, id=35, 2446.13875pt x 1631.09375pt>
+<./images/title.png, id=39, 2446.13875pt x 1631.09375pt>
 File: ./images/title.png Graphic file (type png)
 <use ./images/title.png>
 Package pdftex.def Info: ./images/title.png  used on input line 71.
@@ -595,7 +595,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [3] ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-<./images/1.1.PNG, id=97, 968.11688pt x 565.36218pt>
+<./images/1.1.PNG, id=112, 968.11688pt x 565.36218pt>
 File: ./images/1.1.PNG Graphic file (type png)
 <use ./images/1.1.PNG>
 Package pdftex.def Info: ./images/1.1.PNG  used on input line 103.
@@ -608,12 +608,12 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 127.
  [5]
-<./images/1.2_a.PNG, id=145, 966.61125pt x 563.85657pt>
+<./images/1.2_a.PNG, id=160, 966.61125pt x 563.85657pt>
 File: ./images/1.2_a.PNG Graphic file (type png)
 <use ./images/1.2_a.PNG>
 Package pdftex.def Info: ./images/1.2_a.PNG  used on input line 172.
 (pdftex.def)             Requested size: 386.95897pt x 225.7279pt.
-<./images/1.2_b.PNG, id=146, 966.61125pt x 568.37344pt>
+<./images/1.2_b.PNG, id=161, 966.61125pt x 568.37344pt>
 File: ./images/1.2_b.PNG Graphic file (type png)
 <use ./images/1.2_b.PNG>
 Package pdftex.def Info: ./images/1.2_b.PNG  used on input line 192.
@@ -623,12 +623,12 @@ Overfull \hbox (9.80228pt too wide) in paragraph at lines 231--232
 [][][][][][][][][][][][][] 
  []
 
-<./images/1.3_a.PNG, id=192, 523.9575pt x 124.96687pt>
+<./images/1.3_a.PNG, id=207, 523.9575pt x 124.96687pt>
 File: ./images/1.3_a.PNG Graphic file (type png)
 <use ./images/1.3_a.PNG>
 Package pdftex.def Info: ./images/1.3_a.PNG  used on input line 238.
 (pdftex.def)             Requested size: 386.95897pt x 92.29478pt.
-<./images/1.3_b.PNG, id=193, 964.35281pt x 566.86781pt>
+<./images/1.3_b.PNG, id=208, 964.35281pt x 566.86781pt>
 File: ./images/1.3_b.PNG Graphic file (type png)
 <use ./images/1.3_b.PNG>
 Package pdftex.def Info: ./images/1.3_b.PNG  used on input line 261.
@@ -660,7 +660,7 @@ Overfull \hbox (23.90225pt too wide) in paragraph at lines 373--374
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/1.4.PNG, id=273, 965.10562pt x 567.62062pt>
+<./images/1.4.PNG, id=288, 965.10562pt x 567.62062pt>
 File: ./images/1.4.PNG Graphic file (type png)
 <use ./images/1.4.PNG>
 Package pdftex.def Info: ./images/1.4.PNG  used on input line 379.
@@ -690,7 +690,7 @@ Overfull \hbox (101.45212pt too wide) in paragraph at lines 441--442
 [][][][][][][][][][][][][][][][][] 
  []
 
-<./images/1.5_a.PNG, id=326, 966.61125pt x 567.62062pt>
+<./images/1.5_a.PNG, id=341, 966.61125pt x 567.62062pt>
 File: ./images/1.5_a.PNG Graphic file (type png)
 <use ./images/1.5_a.PNG>
 Package pdftex.def Info: ./images/1.5_a.PNG  used on input line 449.
@@ -705,13 +705,13 @@ Overfull \hbox (122.60208pt too wide) in paragraph at lines 466--467
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/1.5_b.PNG, id=356, 962.84718pt x 564.60938pt>
+<./images/1.5_b.PNG, id=371, 962.84718pt x 564.60938pt>
 File: ./images/1.5_b.PNG Graphic file (type png)
 <use ./images/1.5_b.PNG>
 Package pdftex.def Info: ./images/1.5_b.PNG  used on input line 474.
 (pdftex.def)             Requested size: 386.95897pt x 226.90804pt.
 [14 <./images/1.5_a.PNG>]
-<./images/1.5_c.PNG, id=376, 967.36406pt x 564.60938pt>
+<./images/1.5_c.PNG, id=391, 967.36406pt x 564.60938pt>
 File: ./images/1.5_c.PNG Graphic file (type png)
 <use ./images/1.5_c.PNG>
 Package pdftex.def Info: ./images/1.5_c.PNG  used on input line 499.
@@ -721,12 +721,12 @@ Overfull \hbox (157.85202pt too wide) in paragraph at lines 508--509
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/1.5_d_1.PNG, id=395, 965.85844pt x 566.86781pt>
+<./images/1.5_d_1.PNG, id=410, 965.85844pt x 566.86781pt>
 File: ./images/1.5_d_1.PNG Graphic file (type png)
 <use ./images/1.5_d_1.PNG>
 Package pdftex.def Info: ./images/1.5_d_1.PNG  used on input line 529.
 (pdftex.def)             Requested size: 237.01411pt x 139.10439pt.
-<./images/1.5_d_2.PNG, id=396, 965.10562pt x 562.35094pt>
+<./images/1.5_d_2.PNG, id=411, 965.10562pt x 562.35094pt>
 File: ./images/1.5_d_2.PNG Graphic file (type png)
 <use ./images/1.5_d_2.PNG>
 Package pdftex.def Info: ./images/1.5_d_2.PNG  used on input line 529.
@@ -742,12 +742,12 @@ Overfull \hbox (2.75229pt too wide) in paragraph at lines 537--538
 [][][][][][][][][][][][][][][][] 
  []
 
-<./images/1.5_e_1.PNG, id=418, 965.85844pt x 564.60938pt>
+<./images/1.5_e_1.PNG, id=433, 965.85844pt x 564.60938pt>
 File: ./images/1.5_e_1.PNG Graphic file (type png)
 <use ./images/1.5_e_1.PNG>
 Package pdftex.def Info: ./images/1.5_e_1.PNG  used on input line 560.
 (pdftex.def)             Requested size: 237.01411pt x 138.55019pt.
-<./images/1.5_e_2.PNG, id=419, 965.85844pt x 566.115pt>
+<./images/1.5_e_2.PNG, id=434, 965.85844pt x 566.115pt>
 File: ./images/1.5_e_2.PNG Graphic file (type png)
 <use ./images/1.5_e_2.PNG>
 Package pdftex.def Info: ./images/1.5_e_2.PNG  used on input line 560.
@@ -762,7 +762,7 @@ Overfull \hbox (2.75229pt too wide) in paragraph at lines 637--638
 [][][][][][][][][] 
  []
 
-<./images/2.1_a.PNG, id=488, 967.36406pt x 566.86781pt>
+<./images/2.1_a.PNG, id=503, 967.36406pt x 566.86781pt>
 File: ./images/2.1_a.PNG Graphic file (type png)
 <use ./images/2.1_a.PNG>
 Package pdftex.def Info: ./images/2.1_a.PNG  used on input line 645.
@@ -778,10 +778,15 @@ Overfull \hbox (23.90225pt too wide) in paragraph at lines 665--666
  []
 
 [19 <./images/2.1_a.PNG>]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 697.
+
 Overfull \hbox (327.05173pt too wide) in paragraph at lines 698--699
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 699.
 
 Overfull \hbox (334.10172pt too wide) in paragraph at lines 700--701
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -797,100 +802,196 @@ Overfull \hbox (52.1022pt too wide) in paragraph at lines 704--705
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/2.1_b.PNG, id=524, 963.6pt x 563.85657pt>
+<./images/2.1_b.PNG, id=539, 963.6pt x 563.85657pt>
 File: ./images/2.1_b.PNG Graphic file (type png)
 <use ./images/2.1_b.PNG>
 Package pdftex.def Info: ./images/2.1_b.PNG  used on input line 710.
 (pdftex.def)             Requested size: 386.95897pt x 226.42482pt.
 [20 <./images/2.1_b.PNG>]
 Overfull \hbox (59.15219pt too wide) in paragraph at lines 745--746
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (87.35214pt too wide) in paragraph at lines 746--747
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (87.35214pt too wide) in paragraph at lines 754--755
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (59.15219pt too wide) in paragraph at lines 754--755
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (157.85202pt too wide) in paragraph at lines 756--757
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (129.65207pt too wide) in paragraph at lines 756--757
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [21]
-Overfull \hbox (228.3519pt too wide) in paragraph at lines 788--789
+Overfull \hbox (200.15195pt too wide) in paragraph at lines 788--789
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (291.80179pt too wide) in paragraph at lines 790--791
+Overfull \hbox (263.60184pt too wide) in paragraph at lines 790--791
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (214.25192pt too wide) in paragraph at lines 791--792
+Overfull \hbox (186.05197pt too wide) in paragraph at lines 791--792
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/2.1_c_1.PNG, id=602, 965.10562pt x 565.36218pt>
+<./images/2.1_c_1.PNG, id=618, 965.10562pt x 565.36218pt>
 File: ./images/2.1_c_1.PNG Graphic file (type png)
 <use ./images/2.1_c_1.PNG>
 Package pdftex.def Info: ./images/2.1_c_1.PNG  used on input line 801.
 (pdftex.def)             Requested size: 386.95897pt x 226.67572pt.
 [22]
-<./images/2.1_c_2.PNG, id=631, 963.6pt x 566.115pt>
+<./images/2.1_c_2.PNG, id=646, 963.6pt x 566.115pt>
 File: ./images/2.1_c_2.PNG Graphic file (type png)
 <use ./images/2.1_c_2.PNG>
 Package pdftex.def Info: ./images/2.1_c_2.PNG  used on input line 817.
 (pdftex.def)             Requested size: 237.01411pt x 139.23927pt.
-<./images/2.1_c_3.PNG, id=632, 965.10562pt x 566.115pt>
+<./images/2.1_c_3.PNG, id=647, 965.10562pt x 566.115pt>
 File: ./images/2.1_c_3.PNG Graphic file (type png)
 <use ./images/2.1_c_3.PNG>
 Package pdftex.def Info: ./images/2.1_c_3.PNG  used on input line 817.
 (pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
 
-Overfull \hbox (277.70181pt too wide) in paragraph at lines 826--827
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (249.50186pt too wide) in paragraph at lines 826--827
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (235.40189pt too wide) in paragraph at lines 828--829
+Overfull \hbox (207.20193pt too wide) in paragraph at lines 828--829
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/2.1_c_final.PNG, id=633, 965.10562pt x 566.115pt>
+<./images/2.1_c_final.PNG, id=648, 965.10562pt x 566.115pt>
 File: ./images/2.1_c_final.PNG Graphic file (type png)
 <use ./images/2.1_c_final.PNG>
 Package pdftex.def Info: ./images/2.1_c_final.PNG  used on input line 836.
 (pdftex.def)             Requested size: 386.95897pt x 226.97755pt.
-[23 <./images/2.1_c_1.PNG> <./images/2.1_c_2.PNG> <./images/2.1_c_3.PNG>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 844.
- [24 <./images/2.1_c_final.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 844.
+[23 <./images/2.1_c_1.PNG> <./images/2.1_c_2.PNG> <./images/2.1_c_3.PNG>] [24 <./images/2.1_c_final.PNG>]
+Overfull \hbox (73.25217pt too wide) in paragraph at lines 884--885
+[][][][][][][][][] 
+ []
+
+<./images/2.2_a_1.PNG, id=692, 965.10562pt x 566.115pt>
+File: ./images/2.2_a_1.PNG Graphic file (type png)
+<use ./images/2.2_a_1.PNG>
+Package pdftex.def Info: ./images/2.2_a_1.PNG  used on input line 896.
+(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
+<./images/2.2_a_2.PNG, id=693, 965.85844pt x 569.87906pt>
+File: ./images/2.2_a_2.PNG Graphic file (type png)
+<use ./images/2.2_a_2.PNG>
+Package pdftex.def Info: ./images/2.2_a_2.PNG  used on input line 896.
+(pdftex.def)             Requested size: 237.01411pt x 139.84332pt.
+<./images/2.2_b_1.PNG, id=694, 965.10562pt x 567.62062pt>
+File: ./images/2.2_b_1.PNG Graphic file (type png)
+<use ./images/2.2_b_1.PNG>
+Package pdftex.def Info: ./images/2.2_b_1.PNG  used on input line 914.
+(pdftex.def)             Requested size: 237.01411pt x 139.39305pt.
+<./images/2.2_b_2.PNG, id=695, 963.6pt x 566.115pt>
+File: ./images/2.2_b_2.PNG Graphic file (type png)
+<use ./images/2.2_b_2.PNG>
+Package pdftex.def Info: ./images/2.2_b_2.PNG  used on input line 914.
+(pdftex.def)             Requested size: 237.01411pt x 139.23927pt.
+<./images/2.2_c_1.PNG, id=696, 965.85844pt x 567.62062pt>
+File: ./images/2.2_c_1.PNG Graphic file (type png)
+<use ./images/2.2_c_1.PNG>
+Package pdftex.def Info: ./images/2.2_c_1.PNG  used on input line 930.
+(pdftex.def)             Requested size: 237.01411pt x 139.28912pt.
+<./images/2.2_c_2.PNG, id=697, 966.61125pt x 566.115pt>
+File: ./images/2.2_c_2.PNG Graphic file (type png)
+<use ./images/2.2_c_2.PNG>
+Package pdftex.def Info: ./images/2.2_c_2.PNG  used on input line 930.
+(pdftex.def)             Requested size: 237.01411pt x 138.80736pt.
+[25 <./images/2.2_a_1.PNG> <./images/2.2_a_2.PNG> <./images/2.2_b_1.PNG> <./images/2.2_b_2.PNG>]
+<./images/maxlight_1.PNG, id=722, 965.85844pt x 567.62062pt>
+File: ./images/maxlight_1.PNG Graphic file (type png)
+<use ./images/maxlight_1.PNG>
+Package pdftex.def Info: ./images/maxlight_1.PNG  used on input line 948.
+(pdftex.def)             Requested size: 237.01411pt x 139.28912pt.
+<./images/maxlight_2.PNG, id=723, 964.35281pt x 567.62062pt>
+File: ./images/maxlight_2.PNG Graphic file (type png)
+<use ./images/maxlight_2.PNG>
+Package pdftex.def Info: ./images/maxlight_2.PNG  used on input line 948.
+(pdftex.def)             Requested size: 237.01411pt x 139.50565pt.
+
+Overfull \hbox (136.70206pt too wide) in paragraph at lines 961--962
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (94.40213pt too wide) in paragraph at lines 971--972
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (164.90201pt too wide) in paragraph at lines 975--976
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.80228pt too wide) in paragraph at lines 976--977
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[26 <./images/2.2_c_1.PNG> <./images/2.2_c_2.PNG> <./images/maxlight_1.PNG> <./images/maxlight_2.PNG>]
+Overfull \hbox (112.04001pt too wide) in paragraph at lines 983--984
+[]\OT1/cmr/m/n/12 cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2]) 
+ []
+
+
+Overfull \hbox (327.05173pt too wide) in paragraph at lines 1005--1006
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (30.95224pt too wide) in paragraph at lines 1006--1007
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (468.05148pt too wide) in paragraph at lines 1019--1020
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/2.2_d_1.PNG, id=756, 965.10562pt x 566.115pt>
+File: ./images/2.2_d_1.PNG Graphic file (type png)
+<use ./images/2.2_d_1.PNG>
+Package pdftex.def Info: ./images/2.2_d_1.PNG  used on input line 1029.
+(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
+<./images/2.2_d_2.PNG, id=757, 968.86969pt x 566.86781pt>
+File: ./images/2.2_d_2.PNG Graphic file (type png)
+<use ./images/2.2_d_2.PNG>
+Package pdftex.def Info: ./images/2.2_d_2.PNG  used on input line 1029.
+(pdftex.def)             Requested size: 237.01411pt x 138.6719pt.
+[27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1037.
+ [28 <./images/2.2_d_1.PNG> <./images/2.2_d_2.PNG>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1037.
  (f:/TEAN\Portfolio\mega_racer\report\report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 844.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 844.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1037.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1037.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 76C07A9FD9548344A50BED6A7D65264E;586.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 844.
+(rerunfilecheck)             Checksum: 67CFD7E5B996549A38CE1F9A498C4DA8;646.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1037.
  ) 
 Here is how much of TeX's memory you used:
- 14698 strings out of 480934
- 238946 string characters out of 2899918
- 729088 words of memory out of 3000000
- 29792 multiletter control sequences out of 15000+200000
- 538490 words of font info for 44 fonts, out of 3000000 for 9000
+ 14910 strings out of 480934
+ 242453 string characters out of 2899918
+ 729089 words of memory out of 3000000
+ 29886 multiletter control sequences out of 15000+200000
+ 538867 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,99p,961b,1866s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on f:/TEAN\Portfolio\mega_racer\report\report.pdf (24 pages, 28580604 bytes).
+ 55i,10n,99p,961b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on f:/TEAN\Portfolio\mega_racer\report\report.pdf (28 pages, 41798258 bytes).
 PDF statistics:
- 783 PDF objects out of 1000 (max. 8388607)
- 480 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 958 PDF objects out of 1000 (max. 8388607)
+ 587 named destinations out of 1000 (max. 500000)
+ 223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

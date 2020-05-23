@@ -650,7 +650,7 @@ def load():
 \textbf{(2) Set the steep texture}
 First thing is to get the coordinates of the normalised world space. The viewSpacePosition, viewSpaceNormal and worldSpacePosition had already been calculated so I followed the same pattern to get the worldSpaceNormal.
 
-    \begin{lstlisting}
+    \begin{lstlisting}[language=python]
     vertexShader =
         out VertexData
         {
@@ -678,7 +678,7 @@ First thing is to get the coordinates of the normalised world space. The viewSpa
 
     Now that the normalised world space is available to use, the slope needs to be calculated and compared to the threshold to determine when to blend the textures.
 
-    \begin{lstlisting}
+    \begin{lstlisting}[language=python]
     # terrain.py
     TU_Steep = 2
     steepTexture = None
@@ -716,7 +716,7 @@ First thing is to get the coordinates of the normalised world space. The viewSpa
 
 \textbf{(3) Add the road}
 The same steps for the other textures were then applied to roadTexture and mapTexture, except for the sampling in the main() of fragmentShader as this would be a little different. Also, when using ObjModel.loadTexture since the track image is not a SRGB file, the argument for the srgb parameter is False. 
-\begin{lstlisting}
+\begin{lstlisting}[language=python]
     # terrain.py
     TU_Road = 3
     TU_Map = 4
@@ -748,51 +748,51 @@ The same steps for the other textures were then applied to roadTexture and mapTe
 
 
 Since the shader doesn't have access to the type of terrain (previously relying on height and slope), the blueChannel needs to be able to be accessed so the shader knows what is considered 'road'. To be able to sample this texture the first step was to get the normalised texture coordinates. This was possible by following the similar steps to the worldSpaceNormal but with the xyNormScale and xyOffset. I knew I needed to use the xyNormScale variable instead of terrainTextureXyScale, but I wasn't sure of the purpose of offset yet. These were the last two declared variables in the vertex shader that hadn't been carried through to the fragment shader despite being declared as uniform in render() at the same time as the Texture XyScale and HeightScale.
-\begin{lstlisting}
 
-    # render()      
-    xyNormScale = 1.0 / (vec2(self.imageWidth, self.imageHeight) * self.xyScale);
-    lu.setUniform(self.shader, "xyNormScale", xyNormScale);
-    xyOffset = -(vec2(self.imageWidth, self.imageHeight) + vec2(1.0)) * self.xyScale / 2.0;
-    lu.setUniform(self.shader, "xyOffset", xyOffset);
+\begin{lstlisting}[language=python]
+# render()      
+xyNormScale = 1.0 / (vec2(self.imageWidth, self.imageHeight) * self.xyScale);
+lu.setUniform(self.shader, "xyNormScale", xyNormScale);
+xyOffset = -(vec2(self.imageWidth, self.imageHeight) + vec2(1.0)) * self.xyScale / 2.0;
+lu.setUniform(self.shader, "xyOffset", xyOffset);
 
-    --> 
+--> 
 
-    # load()
-    vertexShader =
-        out VertexData
-        {
-            vec2 v2f_xyNormScale;
-            vec2 v2f_xyOffset;
-        }
-        void main()
-        {
-            v2f_xyNormScale = xyNormScale;
-            v2f_xyOffset = xyOffset;
-        }
-    fragmentShader = 
-        in VertexData
-        {
-            vec2 v2f_xyNormScale;
-            vec2 v2f_xyOffset;
-        }
+# load()
+vertexShader =
+    out VertexData
+    {
+        vec2 v2f_xyNormScale;
+        vec2 v2f_xyOffset;
+    }
+    void main()
+    {
+        v2f_xyNormScale = xyNormScale;
+        v2f_xyOffset = xyOffset;
+    }
+fragmentShader = 
+    in VertexData
+    {
+        vec2 v2f_xyNormScale;
+        vec2 v2f_xyOffset;
+    }
     \end{lstlisting}
 
 When working on this section, it was often difficult to determine the problem, as unless the texture was declared, bound and loaded properly in the shader nothing would display. The below code is the first iteration that provided 'working' shading. The blueChannel variable followed that of the other textures, though instead of multiplying the worldSpacePosition.xy by the terrainTextureXyScale it was multiplied by the xyNormScale variable and only the z coordinate needed to be stored. The threshold of 0.9 was chosen as this produced the most accurate result. 
-    \begin{lstlisting}
-    # terrain.py       
-    def load():
-        fragmentShader =                 
-            void main():
-            {   ....
-            float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy) * v2f_xyNormScale).z;
-            if (blueChannel >= 0.9) {
-                vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                materialColour =  mix(materialColour, roadColour, (v2f_height/terrainHeightScale));
-                }
+\begin{lstlisting}[language=python]
+# terrain.py       
+def load():
+    fragmentShader =                 
+        void main():
+        {   ....
+        float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy) * v2f_xyNormScale).z;
+        if (blueChannel >= 0.9) {
+            vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
+            materialColour =  mix(materialColour, roadColour, (v2f_height/terrainHeightScale));
             }
-    \end{lstlisting} 
-    
+        }
+\end{lstlisting} 
+
 When I finally did get the shader working to a point that it would display it was clear that there were still a couple of issues to resolve.
 
 \begin{figure} [H]
@@ -821,14 +821,14 @@ When I finally did get the shader working to a point that it would display it wa
 
 After making these changes, the paving was successfully sampled and loading correctly onto the correct coordinates for the road according to the blue channel of the track.
 
-    \begin{lstlisting}
-    # terrain.py       
-    float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy - v2f_xyOffset) * v2f_xyNormScale).z;
-    if (blueChannel >= 0.9) {
-        vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-            materialColour = roadColour;
-    }
-    \end{lstlisting} 
+\begin{lstlisting}[language=python]
+# terrain.py       
+float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy - v2f_xyOffset) * v2f_xyNormScale).z;
+if (blueChannel >= 0.9) {
+    vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
+        materialColour = roadColour;
+}
+\end{lstlisting} 
 
     \begin{figure} [H]
         \centering
@@ -837,8 +837,205 @@ After making these changes, the paving was successfully sampled and loading corr
         \caption{2.1 - Road Texture}   
     \end{figure}
 
+\subsection{2.2 Add Fog}
+
+\textbf{(1) Follow the tutorial)}
+Followed the tutorial exactly. Set b to 0.005 because ......
+
+\begin{lstlisting}[language=python]
+# Tutorial
+vec3 applyFog( in vec3  rgb,       // original color of the pixel
+                in float distance ) // camera to point distance
+{
+    float fogAmount = 1.0 - exp( -distance*b );
+    vec3  fogColor  = vec3(0.5,0.6,0.7);
+    return mix( rgb, fogColor, fogAmount );
+}
+-->
+# mega_racer.py - Rendering system
+commonFragmentShaderCode = 
+    ...
+    vec3 applyFog(in vec3 rgb, in float distance)
+    {
+        float b = 0.005;
+        float fogAmount = 1.0 - exp(-distance*b);
+        vec3  fogColor  = vec3(0.5,0.6,0.7);
+        return mix(rgb, fogColor, fogAmount);
+    }
+\end{lstlisting} 
+
+Needed to also replace the fragmentColour to call this new function:
+    \begin{itemize}
+        \item rgb = reflectedLight: This is currently the argument passed into toSrgb as for the 'color' parameter, so it will perform the same purpose as the 'rgb' parameter for applyFog().
+        \item distance = -v2f\_viewSpacePosition.z \\      
+        v2f\_viewSpacePosition = (modelToViewTransform * vec4(positionAttribute, 1.0)).xyz;
+    \end{itemize}
+
+\begin{lstlisting}[language=python]
+#terrain.py
+def load(...):
+    ...
+    fragmentShader = 
+        ...
+        void main()
+        {
+            ...
+            fragmentColor = vec4(toSrgb(applyFog(reflectedLight, 
+                                                    -v2f_viewSpacePosition.z)), 
+                                        1.0);
+        }
+\end{lstlisting} 
+
+\begin{figure} [H]
+    \makebox[\textwidth]{%
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_a_1.PNG}%
+    \hfill
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_a_2.PNG}        
+    }        
+    \caption{2.2 - Basic}   
+\end{figure}
+
+
+(2) Make colour sunLight and Ambient
+The image shows how dark this makes it and project notes suggest a combination of sunLightColour and globalAmbientLight. First I tried the addition of the two
+\begin{lstlisting}[language=python]
+    vec3  fogColor  = (sunLightColour + globalAmbientLight)
+\end{lstlisting} 
+
+\begin{figure} [H]
+    \makebox[\textwidth]{%
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_b_1.PNG}%
+    \hfill
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_b_2.PNG}        
+    }        
+    \caption{2.2 - Fog Colour (Total)}   
+\end{figure}
+
+Then I tried the average of the the two values
+\begin{lstlisting}[language=python]
+    vec3  fogColor  = (sunLightColour + globalAmbientLight) / 2.0
+\end{lstlisting}
+
+\begin{figure} [H]
+    \makebox[\textwidth]{%
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_c_1.PNG}%
+    \hfill
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_c_2.PNG}        
+    }        
+    \caption{2.2 - Fog Colour (Average)}   
+\end{figure}
+
+
+
+Not sure about this one.....
+\begin{lstlisting}[language=python]  
+    # Other
+    vec3  fogColor  = max(sunLightColour, globalAmbientLight*2.0)
+\end{lstlisting}
+\begin{figure} [H]
+    \makebox[\textwidth]{%
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/maxlight_1.PNG}%
+    \hfill
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/maxlight_2.PNG}        
+    }        
+    \caption{2.2 - Max??}   
+\end{figure}
+
+\textbf{(3) Harder version}
+This version uses height based fog.
+\begin{lstlisting}[language=python]
+# Tutorial
+vec3 applyFog( in vec3  rgb,      // original color of the pixel
+                in float distance, // camera to point distance
+                in vec3  rayOri,   // camera position
+                in vec3  rayDir )  // camera to point vector
+{
+    float fogAmount = c * exp(-rayOri.y*b) * (1.0-exp( -distance*rayDir.y*b ))/rayDir.y;
+    vec3  fogColor  = vec3(0.5,0.6,0.7);
+    return mix( rgb, fogColor, fogAmount );
+}
+
+-->
+
+# mega_racer.py - Rendering system
+commonFragmentShaderCode = 
+    ...
+    vec3 applyFog(in vec3 rgb, in float distance, in vec3  rayOri, in vec3 rayDir)
+    {
+        float b = 0.005;
+        float c = 0.66;
+        float fogAmount = c * exp(-rayOri.y*b) * (1.0-exp( -distance*rayDir.y*b ))/rayDir.y;
+        vec3  fogColor  = (sunLightColour + globalAmbientLight) / 2.0;
+        return mix( rgb, fogColor, fogAmount );
+    }
+\end{lstlisting} 
+
+Same as before, the call to the function also needs to be updated. There are a few more variables needed as well:
+    \begin{itemize}
+        \item cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2])
+        \item cameraToPointVector = normalize(positionIn - cameraPosition);
+    \end{itemize}
+
+
+\begin{lstlisting}[language=python]
+# terrain.python
+def load(...):
+    ...
+    vertexShader =
+        \dots
+        uniform mat4 worldToViewTransform;
+
+        out VertexData
+        {
+            ...
+            vec3 cameraPosition;
+            vec3 cameraToPointVector;
+        }
+        void main()
+        {
+            ...
+            cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2])
+            cameraToPointVector = normalize(positionIn - cameraPosition);
+            ...
+        }
+    fragmentShader = 
+        in VertexData
+        {
+            ...
+            vec3 cameraPosition;
+            vec3 cameraToPointVector;
+        }
+        void main()
+        {
+            ...
+            fragmentColor = vec4(toSrgb(applyFog(reflectedLight, -v2f_viewSpacePosition.z, cameraPosition, cameraToPointVector)), 1.0);
+        }
+\end{lstlisting} 
+\begin{figure} [H]
+    \makebox[\textwidth]{%
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_d_1.PNG}%
+    \hfill
+    \includegraphics[width=0.49\textwidth, frame]
+        {./images/2.2_d_2.PNG}        
+    }        
+    \caption{2.2 - Height Fog}   
+\end{figure}
+
 
 
 
 
 \end{document}
+
+
+
+
