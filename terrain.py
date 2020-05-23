@@ -211,6 +211,9 @@ class Terrain:
             uniform vec2 xyNormScale;
             uniform vec2 xyOffset;
 
+            //2.2
+            uniform mat4 worldToViewTransform;
+
 
             // 'out' variables declared in a vertex shader can be accessed in the subsequent stages.
             // For a fragment shader the variable is interpolated (the type of interpolation can be modified, try placing 'flat' in front here and in the fragment shader!).
@@ -225,6 +228,10 @@ class Terrain:
                 vec2 v2f_xyNormScale; // 2.1 - Road
                 vec2 v2f_xyOffset; // 2.1 - Road
 
+                // 2.2
+                vec3 cameraPosition;
+                vec3 cameraToPointVector;
+
             };
 
             void main() 
@@ -238,6 +245,10 @@ class Terrain:
                 v2f_worldSpaceNormal = normalIn; //2.1 - Steep
                 v2f_xyNormScale = xyNormScale; // 2.1 - Road
                 v2f_xyOffset = xyOffset; // 2.1 - Road
+
+                //2.2
+                cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2]);
+                cameraToPointVector = normalize(positionIn - cameraPosition);
 
 	            // gl_Position is a buit-in 'out'-variable that gets passed on to the clipping and rasterization stages (hardware fixed function).
                 // it must be written by the vertex shader in order to produce any drawn geometry. 
@@ -260,6 +271,10 @@ class Terrain:
                 vec3 v2f_worldSpaceNormal;  //2.1 - Steep
                 vec2 v2f_xyNormScale; // 2.1 - Road
                 vec2 v2f_xyOffset; // 2.1 - Road
+
+                // 2.2
+                vec3 cameraPosition;
+                vec3 cameraToPointVector;
             };
 
             uniform float terrainHeightScale;
@@ -297,15 +312,15 @@ class Terrain:
                 } else if (v2f_height > 60) {
                     vec3 highColour = texture(highTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
                     materialColour = mix(materialColour, highColour, (v2f_height/terrainHeightScale));
-                }
-
-                
-
+                }                               
 
                 vec3 reflectedLight = computeShading(materialColour, v2f_viewSpacePosition, v2f_viewSpaceNormal, viewSpaceLightPosition, sunLightColour);
-	            fragmentColor = vec4(toSrgb(reflectedLight), 1.0);
-	            //fragmentColor = vec4(toSrgb(vec3(v2f_height/terrainHeightScale)), 1.0);
+	            //fragmentColor = vec4(toSrgb(reflectedLight), 1.0); // before 2.2
+	            //fragmentColor = vec4(toSrgb(vec3(v2f_height/terrainHeightScale)), 1.0); //start??
 
+                //2.2 - Fog       
+                //fragmentColor = vec4(toSrgb(applyFog(reflectedLight, -v2f_viewSpacePosition.z)), 1.0); // basic fog
+                fragmentColor = vec4(toSrgb(applyFog(reflectedLight, -v2f_viewSpacePosition.z, cameraPosition, cameraToPointVector)), 1.0);
             }
 """
         # Note how we provide lists of source code strings for the two shader stages.

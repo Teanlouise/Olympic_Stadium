@@ -108,6 +108,17 @@ class RenderingSystem:
       return pow(color, vec3(1.0 / 2.2));
     }
 
+    // 2.2 - Fog
+    vec3 applyFog(in vec3 rgb, in float distance, in vec3  rayOri, in vec3 rayDir)
+    {
+        float b = 0.005;
+        float c = 0.66;
+        float fogAmount = c * exp(-rayOri.y*b) * (1.0-exp( -distance*rayDir.y*b ))/rayDir.y;
+        //float fogAmount = 1.0 - exp(-distance*b); // basic fog
+        vec3  fogColor  = (sunLightColour + globalAmbientLight) / 2.0; 
+        return mix( rgb, fogColor, fogAmount );
+    }
+
 
     vec3 computeShading(vec3 materialColour, vec3 viewSpacePosition, vec3 viewSpaceNormal, vec3 viewSpaceLightPos, vec3 lightColour)
     {
