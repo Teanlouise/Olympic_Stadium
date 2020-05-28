@@ -8,3 +8,4 @@
 \contentsline {subsection}{\numberline {2.5}1.5 Lighting from the sun}{12}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}2.1 Improve terrain textures}{17}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}2.2 Add Fog}{24}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}2.3 Props}{27}{subsection.2.8}%
