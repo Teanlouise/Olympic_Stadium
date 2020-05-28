@@ -94,6 +94,8 @@ class ViewParams:
 
 
 
+
+
 #
 # Really just a helper class to be able to pass around shared utilities to the different modules
 #
@@ -138,7 +140,8 @@ class RenderingSystem:
         // Correct colour and itnensity
         vec3 incomingLight = incomingIntensity * lightColour;
         // Indirect light
-        vec3 outgoingLight = (incomingLight + globalAmbientLight) * materialColour;
+        vec3 outgoingLight = (incomingLight + globalAmbientLight) * materialColour;  
+
         return outgoingLight;
         //return materialColour;
         
@@ -168,7 +171,7 @@ class RenderingSystem:
         viewSpaceLightPosition = lu.transformPoint(view.worldToViewTransform, g_sunPosition);
         lu.setUniform(shader, "viewSpaceLightPosition", viewSpaceLightPosition);
         lu.setUniform(shader, "globalAmbientLight", g_globalAmbientLight);
-        lu.setUniform(shader, "sunLightColour", g_sunLightColour);
+        lu.setUniform(shader, "sunLightColour", g_sunLightColour);               
 
     def drawObjModel(self, model, modelToWorldTransform, view):    
         # Bind the shader program such that we can set the uniforms (model.render sets it again)
@@ -302,7 +305,7 @@ def update(dt, keyStateMap, mouseDelta):
     global g_viewTarget # Camera Direction
     global g_viewPosition # Camera Position
     global g_followCamOffset # represent the distance behind and above that the camera should be placed
-    global g_followCamLookOffset #  used to offset the look target above the racer
+    global g_followCamLookOffset #  used to offset the look target above the racer    
 
     if g_updateSun:
         g_sunAngle += dt * 0.25
@@ -316,16 +319,14 @@ def update(dt, keyStateMap, mouseDelta):
     g_racer.update(dt, keyStateMap)
 
     # TODO 1.2: Make the camera look at the racer. Code for updating the camera should be done after the 
-    # racer, otherwise the offset will lag and it generally looks weird. 
-    
+    # racer, otherwise the offset will lag and it generally looks weird.     
     # Set target position
     g_viewTarget = g_racer.position
-
     ### Set view position
     for i in range(0,3):
         g_viewPosition[i] = g_racer.position[i] + g_followCamOffset * -g_racer.heading[i]
     g_viewPosition[2] += g_followCamLookOffset
-
+        
 
     if imgui.tree_node("Camera", imgui.TREE_NODE_DEFAULT_OPEN):
         _,g_followCamOffset = imgui.slider_float("FollowCamOffset ", g_followCamOffset, 2.0, 100.0)
@@ -551,14 +552,15 @@ g_renderingSystem.setupObjModelShader()
 
 g_terrain = Terrain()
 #g_terrain.load("data/track_01_32.png", g_renderingSystem);
-g_terrain.load("data/track_01_128.png", g_renderingSystem);
+g_terrain.load("mega_racer/data/track_01_128.png", g_renderingSystem);
 
 g_racer = Racer()
-g_racer.load("data/racer_02.obj", g_terrain, g_renderingSystem);
+g_racer.load("mega_racer/data/racer_02.obj", g_terrain, g_renderingSystem);
 
 # 2.3 - Props
 g_props = PropManager()
 g_props.loadAllProps(g_terrain)
+
 
 
 
