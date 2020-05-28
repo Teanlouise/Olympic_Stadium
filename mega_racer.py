@@ -23,6 +23,11 @@ from lab_utils import vec3, vec2
 from terrain import Terrain
 from racer import Racer
 
+# 2.3 - Props
+from prop import Prop
+from prop import PropManager
+
+
 #
 # global variable declarations
 #
@@ -51,6 +56,9 @@ g_sunAngle = 0.0
 
 g_terrain = None
 g_racer = None
+
+# 2.3 - Props
+g_props = None
 
 #
 # Key-frames for the sun light and ambient, picked by hand-waving to look ok. Note how most of this is nonsense from a physical point of view and 
@@ -366,7 +374,10 @@ def renderFrame(width, height):
     g_terrain.render(view, g_renderingSystem)
     g_racer.render(view, g_renderingSystem)
 
+    # 2.3 - Props
+    g_props.renderAllProps(view, g_renderingSystem)
 
+    
 
 
 
@@ -544,6 +555,12 @@ g_terrain.load("data/track_01_128.png", g_renderingSystem);
 
 g_racer = Racer()
 g_racer.load("data/racer_02.obj", g_terrain, g_renderingSystem);
+
+# 2.3 - Props
+g_props = PropManager()
+g_props.loadAllProps(g_terrain)
+
+
 
 currentTime = glfw.get_time()
 prevMouseX,prevMouseY = glfw.get_cursor_pos(window)
