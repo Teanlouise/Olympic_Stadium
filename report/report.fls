@@ -1,7 +1,7 @@
-PWD f:\TEAN\Portfolio\mega_racer\report
+PWD f:\TEAN\Portfolio\olympics-graphics\report
 INPUT C:\Users\teanm\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.tex
-OUTPUT f:\TEAN\Portfolio\mega_racer\report\report.log
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.tex
+OUTPUT f:\TEAN\Portfolio\olympics-graphics\report\report.log
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo
@@ -166,9 +166,9 @@ INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmis
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.aux
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.aux
-OUTPUT f:\TEAN\Portfolio\mega_racer\report\report.aux
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.aux
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.aux
+OUTPUT f:\TEAN\Portfolio\olympics-graphics\report\report.aux
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -179,14 +179,14 @@ INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\refcount\refcou
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
-OUTPUT f:\TEAN\Portfolio\mega_racer\report\report.pdf
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
-OUTPUT f:\TEAN\Portfolio\mega_racer\report\report.out
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
+OUTPUT f:\TEAN\Portfolio\olympics-graphics\report\report.pdf
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
+OUTPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.sty
@@ -203,8 +203,8 @@ INPUT .\images\title.png
 INPUT C:\Users\teanm\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.toc
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.toc
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.toc
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.toc
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
@@ -214,10 +214,10 @@ INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
-OUTPUT f:\TEAN\Portfolio\mega_racer\report\report.toc
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.lof
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.lof
-OUTPUT f:\TEAN\Portfolio\mega_racer\report\report.lof
+OUTPUT f:\TEAN\Portfolio\olympics-graphics\report\report.toc
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.lof
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.lof
+OUTPUT f:\TEAN\Portfolio\olympics-graphics\report\report.lof
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
@@ -375,9 +375,69 @@ INPUT .\images\mega_racer\2.3.PNG
 INPUT .\images\mega_racer\2.3.PNG
 INPUT .\images\mega_racer\2.3.PNG
 INPUT .\images\mega_racer\2.3.PNG
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.aux
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
-INPUT f:\TEAN\Portfolio\mega_racer\report\report.out
+INPUT images\olympics\athlete_blend_base.PNG
+INPUT .\images\olympics\athlete_blend_base.PNG
+INPUT .\images\olympics\athlete_blend_base.PNG
+INPUT .\images\olympics\athlete_blend_base.PNG
+INPUT .\images\olympics\athlete_blend_base.PNG
+INPUT images\olympics\athlete_blend_metarig.PNG
+INPUT .\images\olympics\athlete_blend_metarig.PNG
+INPUT .\images\olympics\athlete_blend_metarig.PNG
+INPUT .\images\olympics\athlete_blend_metarig.PNG
+INPUT .\images\olympics\athlete_blend_metarig.PNG
+INPUT images\olympics\athlete_blend_rig2.PNG
+INPUT .\images\olympics\athlete_blend_rig2.PNG
+INPUT .\images\olympics\athlete_blend_rig2.PNG
+INPUT .\images\olympics\athlete_blend_rig2.PNG
+INPUT .\images\olympics\athlete_blend_rig2.PNG
+INPUT images\olympics\athlete_blend_pose.PNG
+INPUT .\images\olympics\athlete_blend_pose.PNG
+INPUT .\images\olympics\athlete_blend_pose.PNG
+INPUT .\images\olympics\athlete_blend_pose.PNG
+INPUT .\images\olympics\athlete_blend_pose.PNG
+INPUT images\olympics\athlete_textures.PNG
+INPUT .\images\olympics\athlete_textures.PNG
+INPUT .\images\olympics\athlete_textures.PNG
+INPUT .\images\olympics\athlete_textures.PNG
+INPUT .\images\olympics\athlete_textures.PNG
+INPUT images\olympics\athlete_blend_colour.jpg
+INPUT .\images\olympics\athlete_blend_colour.jpg
+INPUT .\images\olympics\athlete_blend_colour.jpg
+INPUT .\images\olympics\athlete_blend_colour.jpg
+INPUT .\images\olympics\athlete_blend_colour.jpg
+INPUT images\olympics\athlete_clothes_base.PNG
+INPUT .\images\olympics\athlete_clothes_base.PNG
+INPUT .\images\olympics\athlete_clothes_base.PNG
+INPUT .\images\olympics\athlete_clothes_base.PNG
+INPUT .\images\olympics\athlete_clothes_base.PNG
+INPUT images\olympics\athlete_clothes_colour.PNG
+INPUT .\images\olympics\athlete_clothes_colour.PNG
+INPUT .\images\olympics\athlete_clothes_colour.PNG
+INPUT .\images\olympics\athlete_clothes_colour.PNG
+INPUT .\images\olympics\athlete_clothes_colour.PNG
+INPUT images\olympics\athlete_blend_clothes.PNG
+INPUT .\images\olympics\athlete_blend_clothes.PNG
+INPUT .\images\olympics\athlete_blend_clothes.PNG
+INPUT .\images\olympics\athlete_blend_clothes.PNG
+INPUT .\images\olympics\athlete_blend_clothes.PNG
+INPUT images\olympics\rings_textures.PNG
+INPUT .\images\olympics\rings_textures.PNG
+INPUT .\images\olympics\rings_textures.PNG
+INPUT .\images\olympics\rings_textures.PNG
+INPUT .\images\olympics\rings_textures.PNG
+INPUT images\olympics\rings_blend.jpg
+INPUT .\images\olympics\rings_blend.jpg
+INPUT .\images\olympics\rings_blend.jpg
+INPUT .\images\olympics\rings_blend.jpg
+INPUT .\images\olympics\rings_blend.jpg
+INPUT images\olympics\cone_blend.jpg
+INPUT .\images\olympics\cone_blend.jpg
+INPUT .\images\olympics\cone_blend.jpg
+INPUT .\images\olympics\cone_blend.jpg
+INPUT .\images\olympics\cone_blend.jpg
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.aux
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
+INPUT f:\TEAN\Portfolio\olympics-graphics\report\report.out
 INPUT C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1200.pk
 INPUT C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1200.pk
 INPUT C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk

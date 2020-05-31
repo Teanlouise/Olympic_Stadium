@@ -316,7 +316,7 @@ From this example it is evident that the three arguments for texture() need to b
     \begin{itemize}
         \item detailTexture: The grass colour is similar to the detailColour so the detailTexture is equivalent to the grassTexture.
         \item texCoordScale: In lab 5 the v2f\_textureCoord is a 2 dimensional out vector from the vertex shader. As per the project notes, since the vertex is regular, we can replicate this same behaviour by only selecting the x and y coordinates of the world space which are stored in v2f\_worldSpacePosition.
-        \item v2f\_textureCoord: The textCoordScale in lab 5 is a new name for the given g\_texCoordScale which is declared and uniformly set for the shader as texCoordScale. The same is done for textureXyScale in Terrain which as mentioned is nominated in the project notes as the scale for the texture coordinates.    
+        \item v2f\_textureCoord: The textCoordScale in lab 5 is a new name for the given g\_texCoordScale which is declared and uniformly set for the shader as texCoordScale. The same is done for textureXyScale in Terrain which as mentioned is nominated in the project notes as the scale for the texture coordinates.
     \begin{lstlisting}[language=python] 
 # Lab 5 
 g_texCoordScale = 7.0
@@ -1134,5 +1134,154 @@ Again in the same area as the g\_racer and g\_terrain variables are rendered thi
     \end{figure}
 
 
+
+\section{Olympic Stadium}
+- Rename mega\_racer.py to olympic\_stadium.py
+
+
+\subsection{Track}
+
+Scale by using dimensions of \href{https://www.dimensions.guide/element/track-and-field-400m-running-track}{athletic track}
+
+
+
+\subsection{Props}
+
+In the process of changing elements in the mega\_racer world to reflect an Olympic stadium all of the object models (.obj and .mtl) needed to be either created or modified in blender. This was either because an appropriate free .obj file could not be found or was scaled incorrectly, and/or the .mtl file was missing or not correct. Some basics that needed to be learned to get started was scaling (\href{https://www.youtube.com/watch?v=FPp3ClfDYqI}{tutorial}) and rotating(\href{https://www.youtube.com/watch?v=NUy2O13QH68}{tutorial}).
+
+
+\subsubsection{Athlete}
+Instead of a race car driving around the track, I wanted to replace it with an athlete. A person is quite a complicated model to make from scratch so I looked to source a premade .obj model of a basic person. I decided to go with \href{https://free3d.com/3d-model/male-base-mesh-6682.html}{this} free basic mesh male model uploaded by Paul Chen on free3d.com. The model is in a basic standing position with no texturing. For a more realistic model for the stadium, the model needed to be scaled appropriately and posed in a running position. Importing the .obj file in blender and following \href{https://www.youtube.com/watch?v=XHa2Y8zjtZQ}{this} basic rigging tutorial on YouTube by PIXXO 3D, a meta-rig was set up for the model. This basically entails lining up a bone framework, like a skeleton, to the model. One of the errors I ran into was moving one of the spine bones on accident so that it was detached disallowing the meta-rig from generating, however it was solved from \href{https://blender.stackexchange.com/questions/169555/rigify-error-bone-cannot-connect-chain-bone}{this} post through the blender forum.
+    \begin{figure} [H]
+        \makebox[\textwidth]{%
+        \includegraphics[width=0.49\textwidth, frame]
+            {./images/olympics/athlete_blend_base.PNG}%
+        \hfill
+        \includegraphics[width=0.49\textwidth, frame]
+            {./images/olympics/athlete_blend_metarig.PNG}        
+        }        
+        \caption{Racer - Blender - Base \& Rig}   
+    \end{figure}
+
+Using this meta-rig, blender has a built-in feature that creates a rig that can be used to move the 'bones' around to place the model into poses. For my model, I needed to life one leg backward from the knee and point the foot down, and slightly lift the other foot and bend the knee slightly forward. The arms were moved in the same fashion with one arm back and the hand pointing down and the other arm forward with bend elbow and hand pointing up. Essentially, this put the model in a running pose.
+    \begin{figure} [H]
+        \makebox[\textwidth]{
+        \centering
+        \includegraphics[width=0.49\textwidth, frame]
+            {./images/olympics/athlete_blend_rig2.PNG}
+        \hfill
+        \includegraphics[width=0.49\textwidth, frame]
+            {./images/olympics/athlete_blend_pose.PNG}        
+        }        
+        \caption{Racer - Blender - Posing}   
+    \end{figure}
+
+Now that the athlete was in the running position, some texturing needed to be added. Sourcing images from Google, I found some textures that were appropriate for an athlete including Lycra and breathable material. However, since the model was set as all one material I learnt from \href{https://www.youtube.com/watch?v=afjGodkdp4U}{this} tutorial on YouTube from Jayanam, that I needed to use vertex groups in order to separate them into different sections. In this step, I would have liked to have learn to extrapolate the areas to give them definition and shape the areas to look as they should i.e. make the feet look like shoes. For this basic model, I decided to just colour the separate areas using the image textures I had found. After creating the groups I was able to colour them separately assigning the different materials to the groups as done by \href{https://www.youtube.com/watch?v=ZWJB7HaKJZY}{this} tutorial from Weisbrod Imaging on YouTube.
+    \begin{figure} [H]
+        \makebox[\textwidth]{%
+        \includegraphics[width=0.15\textwidth, height=0.41\textheight, frame]
+            {./images/olympics/athlete_textures.PNG}%
+        \hfill
+        \includegraphics[width=0.8\textwidth, frame]
+            {./images/olympics/athlete_blend_colour.jpg}        
+        }        
+        \caption{Racer - Blender - Colour}   
+    \end{figure}
+
+The athlete was coming together! However, I really didn't like the dodgy colouring attempt so I decided to try and add clothing for more realistic texturing. I found the following free clothing models on turbosquid.com:
+\begin{itemize}
+    \item \textbf{Men Avatar Vest} by swatishr13: href{https://www.turbosquid.com/FullPreview/Index.cfm/ID/1557152}{This} model was imported with no colouring associated. The trims on the sleeve were set as white and the main colour used the same 'top' texture as in the previous colouring. 
+    \item \textbf{short pants} by sazandra: \href{https://www.turbosquid.com/FullPreview/Index.cfm/ID/1434049}{This} file was able to be imported with all textures correctly. Since the model was in a running position, the pants were the wrong shape however the model used a mirror modify so I was able to split the model and just have half of the pants. This half of the pants were used as is and then duplicate was made with a mirror image of the local x and y coordinates that could be set at the right shape for the runner.
+    \item \textbf{shoe} by Bruno Dalla: \href{https://www.turbosquid.com/FullPreview/Index.cfm/ID/1217043}{This} model is of a single show so a duplicate mirrored on the local x was created. The associated texturing for this model didn't load correctly so the above 'shoe' texturing was used except for a trim around the bottom the same colour as the top.
+\end{itemize}
+
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.9\textwidth, frame]
+        {./images/olympics/athlete_clothes_base.PNG}
+    \includegraphics[width=0.9\textwidth, frame]
+        {./images/olympics/athlete_clothes_colour.PNG}    
+    \caption{Racer - Blender - Clothes}   
+\end{figure}
+
+Now I have a posed human model with clothes. The next step would be to add skin texturing and more human features. This was a level of detail that was beyond my ability for this project. Perhaps another time.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.8\textwidth, frame]
+        {./images/olympics/athlete_blend_clothes.PNG}  
+    \caption{Racer - Blender - Final}   
+\end{figure}
+
+
+\subsubsection{Rings}
+It wouldn't be the Olympics without the iconic Olympic rings. Originally I sourced \href{https://www.cgtrader.com/free-3d-models/architectural/other/3d-olympic-rings}{this} model on cgtrader.com, however after trying to open it in blender not only were the set materials not working from the .mtl file but also the rings were connected and overlapping so I wasn't able to separate them out to colour them differently. They seemed simple enough to make myself so following \href{https://www.youtube.com/watch?v=yaWl43Z0QQk}{this} time-lapse video and sourcing my own textures for the rings I made a new model that could be used on the centre area of the stadium. Each ring is a torus that was reshaped slightly, coloured with the textures and then overlapped with the two bottom rings in front. 
+    \begin{figure} [H]
+        \makebox[\textwidth]{%
+        \includegraphics[width=0.15\textwidth, height=0.41\textheight, frame]
+            {./images/olympics/rings_textures.PNG}%
+        \hfill
+        \includegraphics[width=0.8\textwidth, frame]
+            {./images/olympics/rings_blend.jpg}        
+        }        
+        \caption{Props - Rings}   
+    \end{figure}
+
+\subsubsection{Cones}
+To demonstrate props that would be repeated on a large scale, I decided to place safety cones around the inside of the middle area of the stadium. Similar to the Olympic rings, I found \href{https://www.cgtrader.com/free-3d-models/exterior/street/cone-2b4a9172-7afb-4611-8e23-bdac1afe0b87}{various} models on cgtrader.com but the .mtl file was not correct for any of them, so I decided to create my own cones. Following \href{https://www.youtube.com/watch?v=vQ_1HU_-BJM}{this} tutorial I was able to make a realistic traffic safety cone. The cone started as a cylinder, the top was reshaped for the cone appearance, the lip on the top was created, a base added, the strips added using loop cuts and finally the colouring applied.
+    \begin{figure} [H]
+        \centering
+        \includegraphics[width=0.8\textwidth, frame]
+            {./images/olympics/cone_blend.jpg}
+        \caption{Props - Cone}   
+    \end{figure}
+
+
+\subsubsection{Podium}
+\begin{lstlisting}
+    Podium:
+https://xotv.me/channels/219-proseso/vod_videos/3317-how-to-model-a-winners-podium-in-blender-lesson-2 
+
+https://www.cgtrader.com/free-3d-models/sports/equipment/sport-final-ceremony-podium
+
+Seperate:
+https://www.youtube.com/watch?v=U3J-oYFdyqQ
+\end{lstlisting}
+
+
+
+
+
+
+\begin{lstlisting}[language=python]
+#mega_racer.py
+g_props = PropManager()
+propTypes = [['cone', 50, g_terrain.treeLocations], ["rings", 2, g_terrain.rockLocations]]
+g_props.loadAllProps(propTypes)
+
+#prop.py
+class PropManager: 
+    propTypes = []
+    allProps = []    
+
+    def loadProp(self, propType):
+        propModel = ObjModel("data/{propName}/{propName}.obj".format(propName=propType[0]))
+        i = 0
+        while i < propType[1]:
+            prop = Prop()
+            prop.load(propModel, propType[2])         
+            i += 1
+            self.allProps.append(prop)
+
+    def loadAllProps(self, propTypes):
+        self.propTypes = propTypes
+        for prop in self.propTypes:
+            self.loadProp(prop)
+
+    def renderAllProps(self, view, renderingSystem):
+        for prop in self.allProps:
+            prop.render(view, renderingSystem)
+
+\end{lstlisting}
 
 \end{document}
