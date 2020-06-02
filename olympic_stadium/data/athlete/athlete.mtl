@@ -70,7 +70,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd tex\\shoes2.jpg
+map_Kd tex\\shoes.jpg
 
 newmtl Material.007
 Ns 225.000000
@@ -92,7 +92,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd tex\\shoes2.jpg
+map_Kd tex\\shoes.jpg
 
 newmtl Material.011
 Ns 225.000000
@@ -103,7 +103,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd tex\\shoes2.jpg
+map_Kd tex\\shoes.jpg
 
 newmtl None
 Ns 225.000000
@@ -114,7 +114,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd tex\\shoes2.jpg
+map_Kd tex\\shoes.jpg
 
 newmtl None.001
 Ns 500.000001
@@ -167,7 +167,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd tex\\shoes2.jpg
+map_Kd tex\\shoes.jpg
 
 newmtl tenis_2
 Ns 225.000000
@@ -178,7 +178,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd tex\\shoes2.jpg
+map_Kd tex\\shoes.jpg
 
 newmtl tesnis_1
 Ns 225.000000
@@ -189,4 +189,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd tex\\shoes2.jpg
+map_Kd tex\\shoes.jpg
