@@ -59,10 +59,10 @@ class PropManager:
 
     def loadAllProps(self, terrain):
         # Load trees
-        self.treeModel = ObjModel("mega_racer/data/trees/birch_01_d.obj")
+        self.treeModel = ObjModel("data/trees/birch_01_d.obj")
         self.treeList = self.loadPropList(self.treeModel, self.treeMax, terrain.treeLocations)
         # Load rocks
-        self.rockModel = ObjModel("mega_racer/data/rocks/rock_01.obj")
+        self.rockModel = ObjModel("data/rocks/rock_01.obj")
         self.rockList = self.loadPropList(self.rockModel, self.rockMax, terrain.rockLocations) 
         # Create one large list
         self.allProps = self.treeList + self.rockList

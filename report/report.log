@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.4.7)  31 MAY 2020 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.4.7)  5 JUN 2020 02:45
 entering extended mode
 **f:/TEAN/Portfolio/olympics-graphics/report/report.tex
 (f:/TEAN/Portfolio/olympics-graphics/report/report.tex
@@ -465,25 +465,106 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
- (f:/TEAN\Portfolio\olympics-graphics\report\report.aux)
+ ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+) ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty"
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count294
+\mult@box=\box61
+\multicol@leftmargin=\dimen180
+\c@unbalance=\count295
+\c@collectmore=\count296
+\doublecol@number=\count297
+\multicoltolerance=\count298
+\multicolpretolerance=\count299
+\full@width=\dimen181
+\page@free=\dimen182
+\premulticols=\dimen183
+\postmulticols=\dimen184
+\multicolsep=\skip121
+\multicolbaselineskip=\skip122
+\partial@page=\box62
+\last@line=\box63
+\maxbalancingoverflow=\dimen185
+\mult@rightbox=\box64
+\mult@grightbox=\box65
+\mult@gfirstbox=\box66
+\mult@firstbox=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\c@minrows=\count300
+\c@columnbadness=\count301
+\c@finalcolumnbadness=\count302
+\last@try=\dimen186
+\multicolovershoot=\dimen187
+\multicolundershoot=\dimen188
+\mult@nat@firstbox=\box105
+\colbreak@box=\box106
+\mc@col@check@num=\count303
+) ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks27
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (f:/TEAN\Portfolio\olympics-graphics\report\report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -521,17 +602,17 @@ LaTeX Font Info:    ... okay on input line 64.
 
 ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen180
-\scratchbox=\box61
-\nofMPsegments=\count295
-\nofMParguments=\count296
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen181
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count304
+\scratchdimen=\dimen189
+\scratchbox=\box107
+\nofMPsegments=\count305
+\nofMParguments=\count306
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count307
+\MPscratchDim=\dimen190
+\MPnumerator=\count308
+\makeMPintoPDFobject=\count309
+\everyMPtoPDFconversion=\toks29
 ) ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -540,8 +621,8 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 64.
+\AtBeginShipoutBox=\box108
+Package hyperref Info: Link coloring ON on input line 70.
  ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
@@ -549,11 +630,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count300
+\c@section@level=\count310
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
  (f:/TEAN\Portfolio\olympics-graphics\report\report.out) (f:/TEAN\Portfolio\olympics-graphics\report\report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -565,26 +646,23 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\c@lstlisting=\count301
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 68.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 68.
-<./images/title.png, id=71, 2446.13875pt x 1631.09375pt>
+\c@lstlisting=\count311
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+ ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+ ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<./images/title.png, id=79, 2446.13875pt x 1631.09375pt>
 File: ./images/title.png Graphic file (type png)
 <use ./images/title.png>
-Package pdftex.def Info: ./images/title.png  used on input line 71.
+Package pdftex.def Info: ./images/title.png  used on input line 77.
 (pdftex.def)             Requested size: 459.51054pt x 306.40176pt.
  [1
 
-{C:/Users/teanm/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/title.png>] (f:/TEAN\Portfolio\olympics-graphics\report\report.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
-)
+{C:/Users/teanm/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/title.png>] (f:/TEAN\Portfolio\olympics-graphics\report\report.toc)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
@@ -592,144 +670,137 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@lof=\write5
 \openout5 = `report.lof'.
 
- [4] ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-)
-<./images/mega_racer/1.1.PNG, id=170, 968.11688pt x 565.36218pt>
+ [4] [5]
+<./images/mega_racer/1.1.PNG, id=208, 968.11688pt x 565.36218pt>
 File: ./images/mega_racer/1.1.PNG Graphic file (type png)
 <use ./images/mega_racer/1.1.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.1.PNG  used on input line 103.
+Package pdftex.def Info: ./images/mega_racer/1.1.PNG  used on input line 117.
 (pdftex.def)             Requested size: 386.95897pt x 225.97696pt.
- [5 <./images/mega_racer/1.1.PNG>]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 127.
- ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 127.
- [6]
-<./images/mega_racer/1.2_a.PNG, id=218, 966.61125pt x 563.85657pt>
-File: ./images/mega_racer/1.2_a.PNG Graphic file (type png)
-<use ./images/mega_racer/1.2_a.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.2_a.PNG  used on input line 172.
-(pdftex.def)             Requested size: 386.95897pt x 225.7279pt.
-<./images/mega_racer/1.2_b.PNG, id=219, 966.61125pt x 568.37344pt>
-File: ./images/mega_racer/1.2_b.PNG Graphic file (type png)
-<use ./images/mega_racer/1.2_b.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.2_b.PNG  used on input line 192.
-(pdftex.def)             Requested size: 386.95897pt x 227.53615pt.
- [7 <./images/mega_racer/1.2_a.PNG>] [8 <./images/mega_racer/1.2_b.PNG>]
-Overfull \hbox (9.80228pt too wide) in paragraph at lines 231--232
-[][][][][][][][][][][][][] 
+
+Overfull \hbox (56.30862pt too wide) in paragraph at lines 128--130
+[][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/mega_racer/1.3_a.PNG, id=265, 523.9575pt x 124.96687pt>
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 135.
+("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 135.
+ [6 <./images/mega_racer/1.1.PNG>]
+Overfull \hbox (8.30814pt too wide) in paragraph at lines 178--179
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/mega_racer/1.2_1.PNG, id=236, 962.84718pt x 565.36218pt>
+File: ./images/mega_racer/1.2_1.PNG Graphic file (type png)
+<use ./images/mega_racer/1.2_1.PNG>
+Package pdftex.def Info: ./images/mega_racer/1.2_1.PNG  used on input line 184.
+(pdftex.def)             Requested size: 237.01411pt x 139.16626pt.
+<./images/mega_racer/1.2_2.PNG, id=237, 965.85844pt x 569.12625pt>
+File: ./images/mega_racer/1.2_2.PNG Graphic file (type png)
+<use ./images/mega_racer/1.2_2.PNG>
+Package pdftex.def Info: ./images/mega_racer/1.2_2.PNG  used on input line 186.
+(pdftex.def)             Requested size: 237.01411pt x 139.6586pt.
+[7]
+Overfull \hbox (8.30814pt too wide) in paragraph at lines 197--198
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/mega_racer/1.2_b.PNG, id=263, 966.61125pt x 568.37344pt>
+File: ./images/mega_racer/1.2_b.PNG Graphic file (type png)
+<use ./images/mega_racer/1.2_b.PNG>
+Package pdftex.def Info: ./images/mega_racer/1.2_b.PNG  used on input line 205.
+(pdftex.def)             Requested size: 386.95897pt x 227.53615pt.
+[8 <./images/mega_racer/1.2_1.PNG> <./images/mega_racer/1.2_2.PNG> <./images/mega_racer/1.2_b.PNG>]
+Overfull \hbox (2.30807pt too wide) in paragraph at lines 251--252
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/mega_racer/1.3_a.PNG, id=280, 523.9575pt x 124.96687pt>
 File: ./images/mega_racer/1.3_a.PNG Graphic file (type png)
 <use ./images/mega_racer/1.3_a.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.3_a.PNG  used on input line 238.
+Package pdftex.def Info: ./images/mega_racer/1.3_a.PNG  used on input line 258.
 (pdftex.def)             Requested size: 386.95897pt x 92.29478pt.
-<./images/mega_racer/1.3_b.PNG, id=266, 964.35281pt x 566.86781pt>
+[9]
+<./images/mega_racer/1.3_b.PNG, id=308, 964.35281pt x 566.86781pt>
 File: ./images/mega_racer/1.3_b.PNG Graphic file (type png)
 <use ./images/mega_racer/1.3_b.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.3_b.PNG  used on input line 261.
+Package pdftex.def Info: ./images/mega_racer/1.3_b.PNG  used on input line 284.
 (pdftex.def)             Requested size: 386.95897pt x 227.46103pt.
-[9 <./images/mega_racer/1.3_a.PNG>] [10 <./images/mega_racer/1.3_b.PNG>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 308.
+ [10 <./images/mega_racer/1.3_a.PNG> <./images/mega_racer/1.3_b.PNG>] [11]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 335.
  ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 308.
-
-Overfull \hbox (5.59415pt too wide) in paragraph at lines 319--320
-[]\OT1/cmr/m/n/12 v2f[]textureCoord: The textCo-ord-Scale in lab 5 is a new name for the given g[]texCoordScale
- []
-
-
-Overfull \hbox (25.077pt too wide) in paragraph at lines 325--327
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[11]
-Overfull \hbox (30.95224pt too wide) in paragraph at lines 347--348
-[][][][][][][][][][] 
- []
-
-
-Overfull \hbox (23.90225pt too wide) in paragraph at lines 373--374
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-<./images/mega_racer/1.4.PNG, id=346, 965.10562pt x 567.62062pt>
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 335.
+ [12]
+<./images/mega_racer/1.4.PNG, id=403, 965.10562pt x 567.62062pt>
 File: ./images/mega_racer/1.4.PNG Graphic file (type png)
 <use ./images/mega_racer/1.4.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.4.PNG  used on input line 379.
+Package pdftex.def Info: ./images/mega_racer/1.4.PNG  used on input line 410.
 (pdftex.def)             Requested size: 386.95897pt x 227.5812pt.
-[12]
-Overfull \hbox (94.40213pt too wide) in paragraph at lines 391--392
+ [13 <./images/mega_racer/1.4.PNG>]
+Overfull \hbox (8.30814pt too wide) in paragraph at lines 428--429
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (122.60208pt too wide) in paragraph at lines 392--393
+Overfull \hbox (32.30838pt too wide) in paragraph at lines 429--430
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (298.85178pt too wide) in paragraph at lines 398--399
+Overfull \hbox (182.3099pt too wide) in paragraph at lines 435--436
 [][][][][][][][][][][][] 
  []
 
-[13 <./images/mega_racer/1.4.PNG>]
-Overfull \hbox (87.35214pt too wide) in paragraph at lines 434--436
+[14]
+Overfull \hbox (2.30807pt too wide) in paragraph at lines 467--469
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (101.45212pt too wide) in paragraph at lines 441--442
+Overfull \hbox (14.3082pt too wide) in paragraph at lines 474--475
 [][][][][][][][][][][][][][][][][] 
  []
 
-<./images/mega_racer/1.5_a.PNG, id=400, 966.61125pt x 567.62062pt>
+<./images/mega_racer/1.5_a.PNG, id=458, 966.61125pt x 567.62062pt>
 File: ./images/mega_racer/1.5_a.PNG Graphic file (type png)
 <use ./images/mega_racer/1.5_a.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.5_a.PNG  used on input line 449.
+Package pdftex.def Info: ./images/mega_racer/1.5_a.PNG  used on input line 482.
 (pdftex.def)             Requested size: 386.95897pt x 227.23476pt.
-[14]
-Overfull \hbox (66.20218pt too wide) in paragraph at lines 458--460
-[][][][][][][][][][][][][][][][][][][] 
- []
 
-
-Overfull \hbox (122.60208pt too wide) in paragraph at lines 466--467
+Overfull \hbox (32.30838pt too wide) in paragraph at lines 499--500
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/mega_racer/1.5_b.PNG, id=429, 962.84718pt x 564.60938pt>
+<./images/mega_racer/1.5_b.PNG, id=459, 962.84718pt x 564.60938pt>
 File: ./images/mega_racer/1.5_b.PNG Graphic file (type png)
 <use ./images/mega_racer/1.5_b.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.5_b.PNG  used on input line 474.
+Package pdftex.def Info: ./images/mega_racer/1.5_b.PNG  used on input line 507.
 (pdftex.def)             Requested size: 386.95897pt x 226.90804pt.
 [15 <./images/mega_racer/1.5_a.PNG>]
-<./images/mega_racer/1.5_c.PNG, id=449, 967.36406pt x 564.60938pt>
+<./images/mega_racer/1.5_c.PNG, id=491, 967.36406pt x 564.60938pt>
 File: ./images/mega_racer/1.5_c.PNG Graphic file (type png)
 <use ./images/mega_racer/1.5_c.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.5_c.PNG  used on input line 499.
+Package pdftex.def Info: ./images/mega_racer/1.5_c.PNG  used on input line 532.
 (pdftex.def)             Requested size: 386.95897pt x 225.84836pt.
- [16 <./images/mega_racer/1.5_b.PNG>]
-Overfull \hbox (157.85202pt too wide) in paragraph at lines 508--509
+ [16 <./images/mega_racer/1.5_b.PNG> <./images/mega_racer/1.5_c.PNG>]
+Overfull \hbox (62.30869pt too wide) in paragraph at lines 540--541
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/mega_racer/1.5_d_1.PNG, id=468, 965.85844pt x 566.86781pt>
+<./images/mega_racer/1.5_d_1.PNG, id=511, 965.85844pt x 566.86781pt>
 File: ./images/mega_racer/1.5_d_1.PNG Graphic file (type png)
 <use ./images/mega_racer/1.5_d_1.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.5_d_1.PNG  used on input line 529.
+Package pdftex.def Info: ./images/mega_racer/1.5_d_1.PNG  used on input line 561.
 (pdftex.def)             Requested size: 237.01411pt x 139.10439pt.
-<./images/mega_racer/1.5_d_2.PNG, id=469, 965.10562pt x 562.35094pt>
+<./images/mega_racer/1.5_d_2.PNG, id=512, 965.10562pt x 562.35094pt>
 File: ./images/mega_racer/1.5_d_2.PNG Graphic file (type png)
 <use ./images/mega_racer/1.5_d_2.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.5_d_2.PNG  used on input line 529.
+Package pdftex.def Info: ./images/mega_racer/1.5_d_2.PNG  used on input line 561.
 (pdftex.def)             Requested size: 237.01411pt x 138.09895pt.
 ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -737,364 +808,415 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) ("C:\Users\teanm\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-) [17 <./images/mega_racer/1.5_c.PNG> <./images/mega_racer/1.5_d_1.PNG> <./images/mega_racer/1.5_d_2.PNG>]
-Overfull \hbox (2.75229pt too wide) in paragraph at lines 537--538
-[][][][][][][][][][][][][][][][] 
- []
-
-<./images/mega_racer/1.5_e_1.PNG, id=491, 965.85844pt x 564.60938pt>
+)
+<./images/mega_racer/1.5_e_1.PNG, id=513, 965.85844pt x 564.60938pt>
 File: ./images/mega_racer/1.5_e_1.PNG Graphic file (type png)
 <use ./images/mega_racer/1.5_e_1.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.5_e_1.PNG  used on input line 560.
+Package pdftex.def Info: ./images/mega_racer/1.5_e_1.PNG  used on input line 592.
 (pdftex.def)             Requested size: 237.01411pt x 138.55019pt.
-<./images/mega_racer/1.5_e_2.PNG, id=492, 965.85844pt x 566.115pt>
+<./images/mega_racer/1.5_e_2.PNG, id=514, 965.85844pt x 566.115pt>
 File: ./images/mega_racer/1.5_e_2.PNG Graphic file (type png)
 <use ./images/mega_racer/1.5_e_2.PNG>
-Package pdftex.def Info: ./images/mega_racer/1.5_e_2.PNG  used on input line 560.
+Package pdftex.def Info: ./images/mega_racer/1.5_e_2.PNG  used on input line 592.
 (pdftex.def)             Requested size: 237.01411pt x 138.91966pt.
-[18 <./images/mega_racer/1.5_e_1.PNG> <./images/mega_racer/1.5_e_2.PNG>]
-Overfull \hbox (45.05222pt too wide) in paragraph at lines 608--609
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[19]
-Overfull \hbox (2.75229pt too wide) in paragraph at lines 637--638
-[][][][][][][][][] 
- []
-
-<./images/mega_racer/2.1_a.PNG, id=562, 967.36406pt x 566.86781pt>
+ [17 <./images/mega_racer/1.5_d_1.PNG> <./images/mega_racer/1.5_d_2.PNG>] [18 <./images/mega_racer/1.5_e_1.PNG> <./images/mega_racer/1.5_e_2.PNG>]
+<./images/mega_racer/2.1_a.PNG, id=563, 967.36406pt x 566.86781pt>
 File: ./images/mega_racer/2.1_a.PNG Graphic file (type png)
 <use ./images/mega_racer/2.1_a.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.1_a.PNG  used on input line 645.
+Package pdftex.def Info: ./images/mega_racer/2.1_a.PNG  used on input line 667.
 (pdftex.def)             Requested size: 386.95897pt x 226.75175pt.
-
-Overfull \hbox (129.65207pt too wide) in paragraph at lines 664--665
+ [19]
+Overfull \hbox (38.30844pt too wide) in paragraph at lines 685--686
 [][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (23.90225pt too wide) in paragraph at lines 665--666
-[][][][][][][][][][][][][][] 
  []
 
 [20 <./images/mega_racer/2.1_a.PNG>]
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 697.
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 717.
 
-Overfull \hbox (327.05173pt too wide) in paragraph at lines 698--699
+Overfull \hbox (206.31015pt too wide) in paragraph at lines 718--719
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 699.
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 719.
 
-Overfull \hbox (334.10172pt too wide) in paragraph at lines 700--701
+Overfull \hbox (212.31021pt too wide) in paragraph at lines 720--721
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (242.45187pt too wide) in paragraph at lines 701--702
+Overfull \hbox (134.30942pt too wide) in paragraph at lines 721--722
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (52.1022pt too wide) in paragraph at lines 704--705
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-<./images/mega_racer/2.1_b.PNG, id=597, 963.6pt x 563.85657pt>
+<./images/mega_racer/2.1_b.PNG, id=639, 963.6pt x 563.85657pt>
 File: ./images/mega_racer/2.1_b.PNG Graphic file (type png)
 <use ./images/mega_racer/2.1_b.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.1_b.PNG  used on input line 710.
+Package pdftex.def Info: ./images/mega_racer/2.1_b.PNG  used on input line 730.
 (pdftex.def)             Requested size: 386.95897pt x 226.42482pt.
 [21 <./images/mega_racer/2.1_b.PNG>]
-Overfull \hbox (59.15219pt too wide) in paragraph at lines 745--746
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (87.35214pt too wide) in paragraph at lines 746--747
+Overfull \hbox (2.30807pt too wide) in paragraph at lines 765--766
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (59.15219pt too wide) in paragraph at lines 754--755
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (129.65207pt too wide) in paragraph at lines 756--757
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[22]
-Overfull \hbox (200.15195pt too wide) in paragraph at lines 788--789
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (263.60184pt too wide) in paragraph at lines 790--791
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (186.05197pt too wide) in paragraph at lines 791--792
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-<./images/mega_racer/2.1_c_1.PNG, id=676, 965.10562pt x 565.36218pt>
-File: ./images/mega_racer/2.1_c_1.PNG Graphic file (type png)
-<use ./images/mega_racer/2.1_c_1.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.1_c_1.PNG  used on input line 801.
-(pdftex.def)             Requested size: 386.95897pt x 226.67572pt.
-[23]
-<./images/mega_racer/2.1_c_2.PNG, id=704, 963.6pt x 566.115pt>
-File: ./images/mega_racer/2.1_c_2.PNG Graphic file (type png)
-<use ./images/mega_racer/2.1_c_2.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.1_c_2.PNG  used on input line 817.
-(pdftex.def)             Requested size: 237.01411pt x 139.23927pt.
-<./images/mega_racer/2.1_c_3.PNG, id=705, 965.10562pt x 566.115pt>
-File: ./images/mega_racer/2.1_c_3.PNG Graphic file (type png)
-<use ./images/mega_racer/2.1_c_3.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.1_c_3.PNG  used on input line 817.
-(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
-
-Overfull \hbox (249.50186pt too wide) in paragraph at lines 826--827
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (207.20193pt too wide) in paragraph at lines 828--829
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-<./images/mega_racer/2.1_c_final.PNG, id=706, 965.10562pt x 566.115pt>
-File: ./images/mega_racer/2.1_c_final.PNG Graphic file (type png)
-<use ./images/mega_racer/2.1_c_final.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.1_c_final.PNG  used on input line 836.
-(pdftex.def)             Requested size: 386.95897pt x 226.97755pt.
-[24 <./images/mega_racer/2.1_c_1.PNG> <./images/mega_racer/2.1_c_2.PNG> <./images/mega_racer/2.1_c_3.PNG>] [25 <./images/mega_racer/2.1_c_final.PNG>]
-Overfull \hbox (73.25217pt too wide) in paragraph at lines 884--885
-[][][][][][][][][] 
- []
-
-<./images/mega_racer/2.2_a_1.PNG, id=751, 965.10562pt x 566.115pt>
-File: ./images/mega_racer/2.2_a_1.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_a_1.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_a_1.PNG  used on input line 896.
-(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
-<./images/mega_racer/2.2_a_2.PNG, id=752, 965.85844pt x 569.87906pt>
-File: ./images/mega_racer/2.2_a_2.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_a_2.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_a_2.PNG  used on input line 896.
-(pdftex.def)             Requested size: 237.01411pt x 139.84332pt.
-<./images/mega_racer/2.2_b_1.PNG, id=753, 965.10562pt x 567.62062pt>
-File: ./images/mega_racer/2.2_b_1.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_b_1.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_b_1.PNG  used on input line 914.
-(pdftex.def)             Requested size: 237.01411pt x 139.39305pt.
-<./images/mega_racer/2.2_b_2.PNG, id=754, 963.6pt x 566.115pt>
-File: ./images/mega_racer/2.2_b_2.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_b_2.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_b_2.PNG  used on input line 914.
-(pdftex.def)             Requested size: 237.01411pt x 139.23927pt.
-<./images/mega_racer/2.2_c_1.PNG, id=755, 965.85844pt x 567.62062pt>
-File: ./images/mega_racer/2.2_c_1.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_c_1.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_c_1.PNG  used on input line 930.
-(pdftex.def)             Requested size: 237.01411pt x 139.28912pt.
-<./images/mega_racer/2.2_c_2.PNG, id=756, 966.61125pt x 566.115pt>
-File: ./images/mega_racer/2.2_c_2.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_c_2.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_c_2.PNG  used on input line 930.
-(pdftex.def)             Requested size: 237.01411pt x 138.80736pt.
-[26 <./images/mega_racer/2.2_a_1.PNG> <./images/mega_racer/2.2_a_2.PNG> <./images/mega_racer/2.2_b_1.PNG> <./images/mega_racer/2.2_b_2.PNG>]
-Overfull \hbox (136.70206pt too wide) in paragraph at lines 946--947
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (94.40213pt too wide) in paragraph at lines 956--957
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (164.90201pt too wide) in paragraph at lines 960--961
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (9.80228pt too wide) in paragraph at lines 961--962
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (112.04001pt too wide) in paragraph at lines 968--969
-[]\OT1/cmr/m/n/12 cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2]) 
- []
-
-[27 <./images/mega_racer/2.2_c_1.PNG> <./images/mega_racer/2.2_c_2.PNG>]
-Overfull \hbox (327.05173pt too wide) in paragraph at lines 990--991
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (30.95224pt too wide) in paragraph at lines 991--992
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (468.05148pt too wide) in paragraph at lines 1004--1005
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-<./images/mega_racer/2.2_d_1.PNG, id=818, 965.10562pt x 566.115pt>
-File: ./images/mega_racer/2.2_d_1.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_d_1.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_d_1.PNG  used on input line 1014.
-(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
-<./images/mega_racer/2.2_d_2.PNG, id=819, 968.86969pt x 566.86781pt>
-File: ./images/mega_racer/2.2_d_2.PNG Graphic file (type png)
-<use ./images/mega_racer/2.2_d_2.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.2_d_2.PNG  used on input line 1014.
-(pdftex.def)             Requested size: 237.01411pt x 138.6719pt.
-[28 <./images/mega_racer/2.2_d_1.PNG> <./images/mega_racer/2.2_d_2.PNG>]
-Overfull \hbox (214.25192pt too wide) in paragraph at lines 1053--1054
+Overfull \hbox (2.30807pt too wide) in paragraph at lines 771--772
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (150.80203pt too wide) in paragraph at lines 1055--1056
+Overfull \hbox (62.30869pt too wide) in paragraph at lines 773--774
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[22]
+Overfull \hbox (122.3093pt too wide) in paragraph at lines 804--805
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (176.30984pt too wide) in paragraph at lines 806--807
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (110.30917pt too wide) in paragraph at lines 807--808
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/mega_racer/2.1_c_1.PNG, id=723, 965.10562pt x 565.36218pt>
+File: ./images/mega_racer/2.1_c_1.PNG Graphic file (type png)
+<use ./images/mega_racer/2.1_c_1.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.1_c_1.PNG  used on input line 815.
+(pdftex.def)             Requested size: 386.95897pt x 226.67572pt.
+<./images/mega_racer/2.1_c_2.PNG, id=724, 963.6pt x 566.115pt>
+File: ./images/mega_racer/2.1_c_2.PNG Graphic file (type png)
+<use ./images/mega_racer/2.1_c_2.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.1_c_2.PNG  used on input line 832.
+(pdftex.def)             Requested size: 237.01411pt x 139.23927pt.
+<./images/mega_racer/2.1_c_3.PNG, id=725, 965.10562pt x 566.115pt>
+File: ./images/mega_racer/2.1_c_3.PNG Graphic file (type png)
+<use ./images/mega_racer/2.1_c_3.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.1_c_3.PNG  used on input line 832.
+(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
+[23 <./images/mega_racer/2.1_c_1.PNG>]
+Overfull \hbox (164.30972pt too wide) in paragraph at lines 839--840
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (128.30936pt too wide) in paragraph at lines 841--842
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/mega_racer/2.1_c_final.PNG, id=745, 965.10562pt x 566.115pt>
+File: ./images/mega_racer/2.1_c_final.PNG Graphic file (type png)
+<use ./images/mega_racer/2.1_c_final.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.1_c_final.PNG  used on input line 849.
+(pdftex.def)             Requested size: 386.95897pt x 226.97755pt.
+[24 <./images/mega_racer/2.1_c_2.PNG> <./images/mega_racer/2.1_c_3.PNG> <./images/mega_racer/2.1_c_final.PNG>]
+Overfull \hbox (14.3082pt too wide) in paragraph at lines 894--895
+[][][][][][][][][] 
+ []
+
+<./images/mega_racer/2.2_a_1.PNG, id=760, 965.10562pt x 566.115pt>
+File: ./images/mega_racer/2.2_a_1.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_a_1.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_a_1.PNG  used on input line 906.
+(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
+<./images/mega_racer/2.2_a_2.PNG, id=761, 965.85844pt x 569.87906pt>
+File: ./images/mega_racer/2.2_a_2.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_a_2.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_a_2.PNG  used on input line 906.
+(pdftex.def)             Requested size: 237.01411pt x 139.84332pt.
+<./images/mega_racer/2.2_b_1.PNG, id=762, 965.10562pt x 567.62062pt>
+File: ./images/mega_racer/2.2_b_1.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_b_1.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_b_1.PNG  used on input line 925.
+(pdftex.def)             Requested size: 237.01411pt x 139.39305pt.
+<./images/mega_racer/2.2_b_2.PNG, id=763, 963.6pt x 566.115pt>
+File: ./images/mega_racer/2.2_b_2.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_b_2.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_b_2.PNG  used on input line 925.
+(pdftex.def)             Requested size: 237.01411pt x 139.23927pt.
+[25 <./images/mega_racer/2.2_a_1.PNG> <./images/mega_racer/2.2_a_2.PNG>]
+<./images/mega_racer/2.2_c_1.PNG, id=804, 965.85844pt x 567.62062pt>
+File: ./images/mega_racer/2.2_c_1.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_c_1.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_c_1.PNG  used on input line 941.
+(pdftex.def)             Requested size: 237.01411pt x 139.28912pt.
+<./images/mega_racer/2.2_c_2.PNG, id=805, 966.61125pt x 566.115pt>
+File: ./images/mega_racer/2.2_c_2.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_c_2.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_c_2.PNG  used on input line 941.
+(pdftex.def)             Requested size: 237.01411pt x 138.80736pt.
+
+Overfull \hbox (112.04001pt too wide) in paragraph at lines 948--949
+[]\OT1/cmr/m/n/12 cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2]) 
+ []
+
+
+Overfull \hbox (92.30899pt too wide) in paragraph at lines 960--961
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[26 <./images/mega_racer/2.2_b_1.PNG> <./images/mega_racer/2.2_b_2.PNG> <./images/mega_racer/2.2_c_1.PNG> <./images/mega_racer/2.2_c_2.PNG>]
+Overfull \hbox (56.30862pt too wide) in paragraph at lines 968--969
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (116.30923pt too wide) in paragraph at lines 972--973
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (230.3104pt too wide) in paragraph at lines 992--993
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (350.31161pt too wide) in paragraph at lines 1006--1007
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/mega_racer/2.2_d_1.PNG, id=829, 965.10562pt x 566.115pt>
+File: ./images/mega_racer/2.2_d_1.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_d_1.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_d_1.PNG  used on input line 1016.
+(pdftex.def)             Requested size: 237.01411pt x 139.02332pt.
+<./images/mega_racer/2.2_d_2.PNG, id=830, 968.86969pt x 566.86781pt>
+File: ./images/mega_racer/2.2_d_2.PNG Graphic file (type png)
+<use ./images/mega_racer/2.2_d_2.PNG>
+Package pdftex.def Info: ./images/mega_racer/2.2_d_2.PNG  used on input line 1016.
+(pdftex.def)             Requested size: 237.01411pt x 138.6719pt.
+[27 <./images/mega_racer/2.2_d_1.PNG> <./images/mega_racer/2.2_d_2.PNG>]
+Overfull \hbox (110.30917pt too wide) in paragraph at lines 1057--1058
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.30862pt too wide) in paragraph at lines 1059--1060
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+[28]
+Overfull \hbox (56.30862pt too wide) in paragraph at lines 1097--1098
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.30862pt too wide) in paragraph at lines 1100--1101
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
 [29]
-Overfull \hbox (150.80203pt too wide) in paragraph at lines 1093--1094
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (150.80203pt too wide) in paragraph at lines 1096--1097
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[30]
-<./images/mega_racer/2.3.PNG, id=931, 968.86969pt x 565.36218pt>
+<./images/mega_racer/2.3.PNG, id=950, 968.86969pt x 565.36218pt>
 File: ./images/mega_racer/2.3.PNG Graphic file (type png)
 <use ./images/mega_racer/2.3.PNG>
-Package pdftex.def Info: ./images/mega_racer/2.3.PNG  used on input line 1132.
+Package pdftex.def Info: ./images/mega_racer/2.3.PNG  used on input line 1130.
 (pdftex.def)             Requested size: 386.95897pt x 225.80441pt.
-<./images/olympics/athlete_blend_base.PNG, id=938, 897.3525pt x 692.5875pt>
-File: ./images/olympics/athlete_blend_base.PNG Graphic file (type png)
-<use ./images/olympics/athlete_blend_base.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_blend_base.PNG  used on input line 1162.
-(pdftex.def)             Requested size: 237.01411pt x 182.92186pt.
-<./images/olympics/athlete_blend_metarig.PNG, id=939, 856.70062pt x 651.18282pt>
-File: ./images/olympics/athlete_blend_metarig.PNG Graphic file (type png)
-<use ./images/olympics/athlete_blend_metarig.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_blend_metarig.PNG  used on input line 1162.
-(pdftex.def)             Requested size: 237.01411pt x 180.1539pt.
- [31 <./images/mega_racer/2.3.PNG>]
-<./images/olympics/athlete_blend_rig2.PNG, id=951, 897.3525pt x 687.31781pt>
-File: ./images/olympics/athlete_blend_rig2.PNG Graphic file (type png)
-<use ./images/olympics/athlete_blend_rig2.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_blend_rig2.PNG  used on input line 1175.
-(pdftex.def)             Requested size: 237.01411pt x 181.53006pt.
-<./images/olympics/athlete_blend_pose.PNG, id=952, 856.70062pt x 651.18282pt>
-File: ./images/olympics/athlete_blend_pose.PNG Graphic file (type png)
-<use ./images/olympics/athlete_blend_pose.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_blend_pose.PNG  used on input line 1175.
-(pdftex.def)             Requested size: 237.01411pt x 180.1539pt.
-<./images/olympics/athlete_textures.PNG, id=955, 162.6075pt x 588.69937pt>
-File: ./images/olympics/athlete_textures.PNG Graphic file (type png)
-<use ./images/olympics/athlete_textures.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_textures.PNG  used on input line 1187.
-(pdftex.def)             Requested size: 72.5524pt x 299.8105pt.
-<./images/olympics/athlete_blend_colour.jpg, id=956, 900.36375pt x 694.09312pt>
-File: ./images/olympics/athlete_blend_colour.jpg Graphic file (type jpg)
-<use ./images/olympics/athlete_blend_colour.jpg>
-Package pdftex.def Info: ./images/olympics/athlete_blend_colour.jpg  used on input line 1187.
-(pdftex.def)             Requested size: 386.95897pt x 298.30595pt.
- [32 <./images/olympics/athlete_blend_base.PNG> <./images/olympics/athlete_blend_metarig.PNG> <./images/olympics/athlete_blend_rig2.PNG> <./images/olympics/athlete_blend_pose.PNG>]
-Overfull \hbox (105.73697pt too wide) in paragraph at lines 1193--1194
-[]\OT1/cmr/bx/n/12 Men Avatar Vest \OT1/cmr/m/n/12 by swatishr13: hrefhttps://www.turbosquid.com/FullPreview/Index.cfm/ID/1557152This
+ [30 <./images/mega_racer/2.3.PNG>]
+Overfull \hbox (121.68369pt too wide) in paragraph at lines 1154--1155
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./images/olympics/athlete_clothes_base.PNG, id=967, 1388.18625pt x 447.17062pt>
+<./images/olympics/athlete_blend_base.PNG, id=977, 897.3525pt x 692.5875pt>
+File: ./images/olympics/athlete_blend_base.PNG Graphic file (type png)
+<use ./images/olympics/athlete_blend_base.PNG>
+Package pdftex.def Info: ./images/olympics/athlete_blend_base.PNG  used on input line 1169.
+(pdftex.def)             Requested size: 237.01411pt x 182.92186pt.
+<./images/olympics/athlete_blend_metarig.PNG, id=978, 856.70062pt x 651.18282pt>
+File: ./images/olympics/athlete_blend_metarig.PNG Graphic file (type png)
+<use ./images/olympics/athlete_blend_metarig.PNG>
+Package pdftex.def Info: ./images/olympics/athlete_blend_metarig.PNG  used on input line 1169.
+(pdftex.def)             Requested size: 237.01411pt x 180.1539pt.
+<./images/olympics/athlete_blend_rig2.PNG, id=979, 897.3525pt x 687.31781pt>
+File: ./images/olympics/athlete_blend_rig2.PNG Graphic file (type png)
+<use ./images/olympics/athlete_blend_rig2.PNG>
+Package pdftex.def Info: ./images/olympics/athlete_blend_rig2.PNG  used on input line 1182.
+(pdftex.def)             Requested size: 237.01411pt x 181.53006pt.
+<./images/olympics/athlete_blend_pose.PNG, id=980, 856.70062pt x 651.18282pt>
+File: ./images/olympics/athlete_blend_pose.PNG Graphic file (type png)
+<use ./images/olympics/athlete_blend_pose.PNG>
+Package pdftex.def Info: ./images/olympics/athlete_blend_pose.PNG  used on input line 1182.
+(pdftex.def)             Requested size: 237.01411pt x 180.1539pt.
+[31 <./images/olympics/athlete_blend_base.PNG> <./images/olympics/athlete_blend_metarig.PNG>]
+<./images/olympics/athlete_textures.PNG, id=996, 162.6075pt x 588.69937pt>
+File: ./images/olympics/athlete_textures.PNG Graphic file (type png)
+<use ./images/olympics/athlete_textures.PNG>
+Package pdftex.def Info: ./images/olympics/athlete_textures.PNG  used on input line 1194.
+(pdftex.def)             Requested size: 72.5524pt x 299.8105pt.
+<./images/olympics/athlete_blend_colour.jpg, id=997, 900.36375pt x 694.09312pt>
+File: ./images/olympics/athlete_blend_colour.jpg Graphic file (type jpg)
+<use ./images/olympics/athlete_blend_colour.jpg>
+Package pdftex.def Info: ./images/olympics/athlete_blend_colour.jpg  used on input line 1194.
+(pdftex.def)             Requested size: 386.95897pt x 298.30595pt.
+ [32 <./images/olympics/athlete_blend_rig2.PNG> <./images/olympics/athlete_blend_pose.PNG> <./images/olympics/athlete_textures.PNG> <./images/olympics/athlete_blend_colour.jpg>]
+<./images/olympics/athlete_clothes_base.PNG, id=1008, 1388.18625pt x 447.17062pt>
 File: ./images/olympics/athlete_clothes_base.PNG Graphic file (type png)
 <use ./images/olympics/athlete_clothes_base.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_clothes_base.PNG  used on input line 1202.
+Package pdftex.def Info: ./images/olympics/athlete_clothes_base.PNG  used on input line 1209.
 (pdftex.def)             Requested size: 435.32422pt x 140.23175pt.
-<./images/olympics/athlete_clothes_colour.PNG, id=968, 1385.92781pt x 483.30562pt>
+<./images/olympics/athlete_clothes_colour.PNG, id=1009, 1385.92781pt x 483.30562pt>
 File: ./images/olympics/athlete_clothes_colour.PNG Graphic file (type png)
 <use ./images/olympics/athlete_clothes_colour.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_clothes_colour.PNG  used on input line 1204.
+Package pdftex.def Info: ./images/olympics/athlete_clothes_colour.PNG  used on input line 1211.
 (pdftex.def)             Requested size: 435.32422pt x 151.80696pt.
-[33 <./images/olympics/athlete_textures.PNG> <./images/olympics/athlete_blend_colour.jpg>]
-<./images/olympics/athlete_blend_clothes.PNG, id=974, 868.74562pt x 658.71094pt>
+<./images/olympics/athlete_blend_clothes.PNG, id=1010, 868.74562pt x 658.71094pt>
 File: ./images/olympics/athlete_blend_clothes.PNG Graphic file (type png)
 <use ./images/olympics/athlete_blend_clothes.PNG>
-Package pdftex.def Info: ./images/olympics/athlete_blend_clothes.PNG  used on input line 1212.
+Package pdftex.def Info: ./images/olympics/athlete_blend_clothes.PNG  used on input line 1219.
 (pdftex.def)             Requested size: 386.95897pt x 293.4119pt.
-<./images/olympics/rings_textures.PNG, id=977, 114.4275pt x 470.50781pt>
-File: ./images/olympics/rings_textures.PNG Graphic file (type png)
-<use ./images/olympics/rings_textures.PNG>
-Package pdftex.def Info: ./images/olympics/rings_textures.PNG  used on input line 1226.
-(pdftex.def)             Requested size: 72.55414pt x 299.81013pt.
-<./images/olympics/rings_blend.jpg, id=978, 899.61093pt x 691.08188pt>
-File: ./images/olympics/rings_blend.jpg Graphic file (type jpg)
-<use ./images/olympics/rings_blend.jpg>
-Package pdftex.def Info: ./images/olympics/rings_blend.jpg  used on input line 1226.
-(pdftex.def)             Requested size: 386.95897pt x 297.26486pt.
- [34 <./images/olympics/athlete_clothes_base.PNG> <./images/olympics/athlete_clothes_colour.PNG> <./images/olympics/athlete_blend_clothes.PNG>]
-<./images/olympics/cone_blend.jpg, id=988, 897.3525pt x 691.08188pt>
-File: ./images/olympics/cone_blend.jpg Graphic file (type jpg)
-<use ./images/olympics/cone_blend.jpg>
-Package pdftex.def Info: ./images/olympics/cone_blend.jpg  used on input line 1235.
-(pdftex.def)             Requested size: 386.95897pt x 298.00302pt.
- [35 <./images/olympics/rings_textures.PNG> <./images/olympics/rings_blend.jpg>]
-Overfull \hbox (235.40189pt too wide) in paragraph at lines 1243--1245
+ [33 <./images/olympics/athlete_clothes_base.PNG> <./images/olympics/athlete_clothes_colour.PNG>]
+<./images/olympics/athlete_world.PNG, id=1017, 965.10562pt x 566.115pt>
+File: ./images/olympics/athlete_world.PNG Graphic file (type png)
+<use ./images/olympics/athlete_world.PNG>
+Package pdftex.def Info: ./images/olympics/athlete_world.PNG  used on input line 1232.
+(pdftex.def)             Requested size: 386.95897pt x 226.97755pt.
+ [34 <./images/olympics/athlete_blend_clothes.PNG> <./images/olympics/athlete_world.PNG>]
+Overfull \hbox (80.30887pt too wide) in paragraph at lines 1244--1245
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (108.5021pt too wide) in paragraph at lines 1245--1247
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (150.80203pt too wide) in paragraph at lines 1259--1260
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (157.85202pt too wide) in paragraph at lines 1268--1269
+Overfull \hbox (86.30893pt too wide) in paragraph at lines 1253--1254
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[36 <./images/olympics/cone_blend.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1287.
- [37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1287.
+<./images/olympics/props_world.PNG, id=1027, 966.61125pt x 566.115pt>
+File: ./images/olympics/props_world.PNG Graphic file (type png)
+<use ./images/olympics/props_world.PNG>
+Package pdftex.def Info: ./images/olympics/props_world.PNG  used on input line 1274.
+(pdftex.def)             Requested size: 386.95897pt x 226.63202pt.
+[35]
+<./images/olympics/rings_textures.PNG, id=1061, 114.4275pt x 470.50781pt>
+File: ./images/olympics/rings_textures.PNG Graphic file (type png)
+<use ./images/olympics/rings_textures.PNG>
+Package pdftex.def Info: ./images/olympics/rings_textures.PNG  used on input line 1287.
+(pdftex.def)             Requested size: 72.55414pt x 299.81013pt.
+<./images/olympics/rings_blend.jpg, id=1062, 899.61093pt x 691.08188pt>
+File: ./images/olympics/rings_blend.jpg Graphic file (type jpg)
+<use ./images/olympics/rings_blend.jpg>
+Package pdftex.def Info: ./images/olympics/rings_blend.jpg  used on input line 1287.
+(pdftex.def)             Requested size: 386.95897pt x 297.26486pt.
+ [36 <./images/olympics/props_world.PNG>]
+<./images/olympics/cone_blend.jpg, id=1070, 897.3525pt x 691.08188pt>
+File: ./images/olympics/cone_blend.jpg Graphic file (type jpg)
+<use ./images/olympics/cone_blend.jpg>
+Package pdftex.def Info: ./images/olympics/cone_blend.jpg  used on input line 1296.
+(pdftex.def)             Requested size: 386.95897pt x 298.00302pt.
+ [37 <./images/olympics/rings_textures.PNG> <./images/olympics/rings_blend.jpg>]
+<./images/olympics/track_dimensions.jpg, id=1079, 881.54344pt x 496.10344pt>
+File: ./images/olympics/track_dimensions.jpg Graphic file (type jpg)
+<use ./images/olympics/track_dimensions.jpg>
+Package pdftex.def Info: ./images/olympics/track_dimensions.jpg  used on input line 1307.
+(pdftex.def)             Requested size: 386.95897pt x 217.76385pt.
+<./images/olympics/track_colours.PNG, id=1080, 836.3747pt x 420.06938pt>
+File: ./images/olympics/track_colours.PNG Graphic file (type png)
+<use ./images/olympics/track_colours.PNG>
+Package pdftex.def Info: ./images/olympics/track_colours.PNG  used on input line 1315.
+(pdftex.def)             Requested size: 290.22107pt x 145.76376pt.
+ [38 <./images/olympics/cone_blend.jpg> <./images/olympics/track_dimensions.jpg>]
+<./images/olympics/track_final.PNG, id=1085, 630.85687pt x 510.40688pt>
+File: ./images/olympics/track_final.PNG Graphic file (type png)
+<use ./images/olympics/track_final.PNG>
+Package pdftex.def Info: ./images/olympics/track_final.PNG  used on input line 1323.
+(pdftex.def)             Requested size: 386.95897pt x 313.0767pt.
+ [39 <./images/olympics/track_colours.PNG> <./images/olympics/track_final.PNG>]
+<./images/olympics/map_world.PNG, id=1101, 961.34157pt x 563.10374pt>
+File: ./images/olympics/map_world.PNG Graphic file (type png)
+<use ./images/olympics/map_world.PNG>
+Package pdftex.def Info: ./images/olympics/map_world.PNG  used on input line 1345.
+(pdftex.def)             Requested size: 290.22107pt x 169.99786pt.
+<./images/olympics/terrain_textures.PNG, id=1102, 939.51pt x 261.22594pt>
+File: ./images/olympics/terrain_textures.PNG Graphic file (type png)
+<use ./images/olympics/terrain_textures.PNG>
+Package pdftex.def Info: ./images/olympics/terrain_textures.PNG  used on input line 1363.
+(pdftex.def)             Requested size: 386.95897pt x 107.5896pt.
+ [40 <./images/olympics/map_world.PNG>]
+Overfull \hbox (248.31058pt too wide) in paragraph at lines 1412--1413
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (278.31088pt too wide) in paragraph at lines 1416--1417
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (302.31113pt too wide) in paragraph at lines 1417--1419
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[41 <./images/olympics/terrain_textures.PNG>]
+Overfull \hbox (236.31046pt too wide) in paragraph at lines 1421--1422
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (236.31046pt too wide) in paragraph at lines 1425--1426
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (224.31033pt too wide) in paragraph at lines 1429--1430
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (236.31046pt too wide) in paragraph at lines 1433--1434
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (458.31271pt too wide) in paragraph at lines 1436--1437
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (374.31186pt too wide) in paragraph at lines 1437--1438
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (20.30826pt too wide) in paragraph at lines 1443--1444
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.30832pt too wide) in paragraph at lines 1444--1445
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/olympics/terrain_world.PNG, id=1172, 963.6pt x 566.86781pt>
+File: ./images/olympics/terrain_world.PNG Graphic file (type png)
+<use ./images/olympics/terrain_world.PNG>
+Package pdftex.def Info: ./images/olympics/terrain_world.PNG  used on input line 1450.
+(pdftex.def)             Requested size: 386.95897pt x 227.63402pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1455.
+[42 <./images/olympics/terrain_world.PNG>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1455.
  (f:/TEAN\Portfolio\olympics-graphics\report\report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1287.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1287.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1455.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1455.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D4518C7394CA4C6ED437A6EC8E933015;1129.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1287.
+(rerunfilecheck)             Checksum: BAEDD252B15F592205B98EECE8325EF5;1169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1455.
  ) 
 Here is how much of TeX's memory you used:
- 15267 strings out of 480934
- 250747 string characters out of 2899918
- 730107 words of memory out of 3000000
- 30096 multiletter control sequences out of 15000+200000
- 538867 words of font info for 45 fonts, out of 3000000 for 9000
+ 16047 strings out of 480934
+ 261529 string characters out of 2899918
+ 742691 words of memory out of 3000000
+ 30728 multiletter control sequences out of 15000+200000
+ 544096 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,99p,1197b,1872s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on f:/TEAN\Portfolio\olympics-graphics\report\report.pdf (37 pages, 45226560 bytes).
+ 55i,10n,99p,1197b,1929s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk> <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\teanm\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/teanm/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on f:/TEAN\Portfolio\olympics-graphics\report\report.pdf (42 pages, 52183751 bytes).
 PDF statistics:
- 1220 PDF objects out of 1440 (max. 8388607)
- 720 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1422 PDF objects out of 1440 (max. 8388607)
+ 832 named destinations out of 1000 (max. 500000)
+ 403 words of extra memory for PDF output out of 10000 (max. 10000000)
 

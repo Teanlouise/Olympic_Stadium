@@ -321,12 +321,14 @@ def update(dt, keyStateMap, mouseDelta):
     # TODO 1.2: Make the camera look at the racer. Code for updating the camera should be done after the 
     # racer, otherwise the offset will lag and it generally looks weird.     
     # Set target position
-    g_viewTarget = g_racer.position
-    ### Set view position
-    for i in range(0,3):
-        g_viewPosition[i] = g_racer.position[i] + g_followCamOffset * -g_racer.heading[i]
-    g_viewPosition[2] += g_followCamLookOffset
-        
+    g_viewTarget = g_racer.position.copy()
+    g_viewTarget[2] += g_followCamLookOffset
+    ### Set view position  
+    g_viewPosition = g_racer.position + (g_followCamOffset * -g_racer.heading)
+    g_viewPosition[2] += g_followCamOffset
+
+
+
 
     if imgui.tree_node("Camera", imgui.TREE_NODE_DEFAULT_OPEN):
         _,g_followCamOffset = imgui.slider_float("FollowCamOffset ", g_followCamOffset, 2.0, 100.0)
@@ -552,10 +554,10 @@ g_renderingSystem.setupObjModelShader()
 
 g_terrain = Terrain()
 #g_terrain.load("data/track_01_32.png", g_renderingSystem);
-g_terrain.load("mega_racer/data/track_01_128.png", g_renderingSystem);
+g_terrain.load("data/track_01_128.png", g_renderingSystem);
 
 g_racer = Racer()
-g_racer.load("mega_racer/data/racer_02.obj", g_terrain, g_renderingSystem);
+g_racer.load("data/racer_02.obj", g_terrain, g_renderingSystem);
 
 # 2.3 - Props
 g_props = PropManager()

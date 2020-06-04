@@ -330,14 +330,14 @@ class Terrain:
         self.shader = lu.buildShader([vertexShader], ["#version 330\n", renderingSystem.commonFragmentShaderCode, fragmentShader], {"positionIn" : 0, "normalIn" : 1})
         
         # TODO 1.4: Load texture and configure the sampler
-        self.grassTexture = ObjModel.loadTexture("grass2.png", "mega_racer/data", True)
+        self.grassTexture = ObjModel.loadTexture("grass2.png", "data", True)
 
         # 2.1
-        self.highTexture = ObjModel.loadTexture("rock 2.png", "mega_racer/data", True)
-        self.steepTexture = ObjModel.loadTexture("rock 5.png", "mega_racer/data", True)
+        self.highTexture = ObjModel.loadTexture("rock 2.png", "data", True)
+        self.steepTexture = ObjModel.loadTexture("rock 5.png", "data", True)
 
-        self.roadTexture = ObjModel.loadTexture("paving 5.png", "mega_racer/data", True)
-        self.mapTexture = ObjModel.loadTexture("track_01_128.png", "mega_racer/data", False)
+        self.roadTexture = ObjModel.loadTexture("paving 5.png", "data", True)
+        self.mapTexture = ObjModel.loadTexture("track_01_128.png", "data", False)
 
 
     # Called by the game to drawt he UI widgets for the terrain.
