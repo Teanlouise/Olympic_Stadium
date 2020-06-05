@@ -2,7 +2,8 @@
 
 The main stadium of an Olympics is the most integral location as it hosts the opening and closing ceremonies, the lighting of the touch and the most popular events [19]. The architecture and design choices of these stadiums ensure athletes can compete in optimal circumstances and thousands of spectators can experience these feats [18]. This project will highlight the ingenuity of these stadiums by offering the opportunity to view its design in detail as a competitor on its athletic track. The end goal is to have a model of an athlete posed as running able to move along an athletic track surrounded by stadium seating and accompanied by props.
 
-In addition to the report a presentation was given providing an overview. 
+In addition to the report a presentation was given providing an overview.
+
 [![video](readme_video.png)](https://youtu.be/X3s_5GrY3Jw)
 
 
@@ -42,17 +43,16 @@ In addition to the report a presentation was given providing an overview.
 # OLYMPICS
 
 ### Athlete
-![athlete_clothes](/report/images/olympics/athlete_blend_clothes.PNG)
+![athlete_clothes](/report/images/olympics/athlete_clothes_colour.PNG)
+![athlete_final](/report/images/olympics/athlete_blend_clothes.PNG)
 ![athlete_world](/report/images/olympics/athlete_world.PNG)
 
 ### Props
 <p float="left">
-  <img src="/report/images/olympics/rings_blend.jpg" width="100" />
-  <img src="/report/images/olympics/props_world.PNG" width="100" /> 
-  <img src="/img3.png" width="100" />
+  <img src="./report/images/olympics/rings_blend.JPG" width="425" />
+  <img src="./report/images/olympics/cone_blend.JPG" width="425" /> 
 </p>
-![Rings](/report/images/olympics/rings_blend.jpg) 
-![Cone](/report/images/olympics/cone_blend.jpg)
+
 ![Props](/report/images/olympics/props_world.PNG)
 
 ### Map
@@ -61,9 +61,6 @@ In addition to the report a presentation was given providing an overview.
 
 ### Terrain Textures
 ![Textures](/report/images/olympics/terrain_textures.PNG)
-![Terain](/report/images/olympics/terrain_world.PNG)
-
-
-#### Blender
+![Terrain](/report/images/olympics/terrain_world.PNG)
 
 
