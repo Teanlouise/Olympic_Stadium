@@ -51,7 +51,7 @@ g_sunPosition = g_sunStartPosition
 g_globalAmbientLight = vec3(0.045,0.045,0.045)
 g_sunLightColour = [0.9, 0.8, 0.7]
 
-g_updateSun = False
+g_updateSun = True
 g_sunAngle = 0.0
 
 g_terrain = None
@@ -323,8 +323,7 @@ def update(dt, keyStateMap, mouseDelta):
     # Set target position
     g_viewTarget = g_racer.position
     ### Set view position
-    for i in range(0,3):
-        g_viewPosition[i] = g_racer.position[i] + g_followCamOffset * -g_racer.heading[i]
+    g_viewPosition = g_racer.position + (g_followCamOffset * -g_racer.heading)
     g_viewPosition[2] += g_followCamLookOffset
         
 

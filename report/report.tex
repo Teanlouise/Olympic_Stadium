@@ -2,7 +2,7 @@
 \documentclass[a4 paper, 12pt]{article}
 
 % Title
-\title{COSC3000 - COMPUTER GRAPHICS REPORT \\ --- \\Olympics Athletic Track}
+\title{COSC3000 - COMPUTER GRAPHICS REPORT \\ --- \\OLYMPIC STADIUM}
 \author{Tean-louise Cunningham (42637460)}
 \date{\today}
 
@@ -58,13 +58,17 @@
 
 % Code
 \usepackage{listings}
-\lstset{basicstyle=\footnotesize, language=python}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstset{basicstyle=\footnotesize, language=python, backgroundcolor=\color{backcolour}}
 
 % Remove number from sections
 \setcounter{secnumdepth}{0}
 
 \usepackage{multicol}
 \usepackage{amssymb}
+\usepackage{standalone}
+\usepackage{pdfpages}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DOCUMENT
 \begin{document}
@@ -88,13 +92,15 @@
 % INTRODUCTION
 \pagebreak
 \section{Introduction}
-In continuance of the exploration of the Olympics from the visualisation project, a graphic simulation of running on an athletic track will be simulated. The main stadium of an Olympics is the most integral location as it hosts the opening and closing ceremonies, the lighting of the touch and the most popular events. The architecture and design choices of these stadiums ensure athletes can compete in optimal circumstances and thousands of spectators can experience these feats. This project will highlight the ingenuity of these stadiums by offering the opportunity to view its design in detail as a competitor on its athletic track. This will be achieved using the provided mega\_racer files, demo and instructions as a base, and the Tokyo National Stadium, which is set to host the 2020 Olympics as inspiration.
+In continuance of the exploration of the Olympics from the visualisation project, a graphic simulation of running on an athletic track will be simulated. The main stadium of an Olympics is the most integral location as it hosts the opening and closing ceremonies, the lighting of the touch and the most popular events [19]. The architecture and design choices of these stadiums ensure athletes can compete in optimal circumstances and thousands of spectators can experience these feats [18]. This project will highlight the ingenuity of these stadiums by offering the opportunity to view its design in detail as a competitor on its athletic track. The end goal is to have a model of an athlete posed as running able to move along an athletic track surrounded by stadium seating and accompanied by props. 
 
-The presentation of this project can be viewed \href{https://www.youtube.com/watch?v=XP5LfHSW7C8}{here}.
+In order to achieve this goal all of the tier 1 deliverables for the provided mega\_racer project were first implemented, as well as the tier 2 tasks of improving terrain texture, adding fog and props. Once these steps were successfully implemented, the base mesh of a human model was rigged and posed, and clothing models textured and set on the model. The models of the Olympic Rings and a safety cones were created as props, appropriate textures mapped and a new map to represent the shape of a stadium was created. To complete all of these tasks various Computer Graphics concepts and techniques were demonstrated, including coordinate systems, setting up a virtual camera, lighting, shading, texturing and modelling in Blender. This report aims to document and communicate the process and understanding of these concepts. The provided self-contained pre-package distribution for Windows is used to run all code in this project.
+
+The presentation of this project can be viewed \href{https://youtu.be/X3s_5GrY3Jw}{here}, in addition to the code \href{https://drive.google.com/drive/folders/13qEjRWL_FDgG3QQQaAF3BSkbr69Wab3i?usp=sharing}{here}.
 
 % MEGA RACER
 \section{Mega Racer}
-Mega Racer is a basic game simulating a race car driving through a wilderness area. The basic game logic, movement and sun light has been provided in the code. Additionally, examples files for the object models, textures and map have been provided and were used for this implementation. There are two tiers of task; basic and advanced. All of the tier 1 tasks were completed successfully as well as the first three tasks from tier 2; improved terrain textures, and the addition of fog and props. These tasks provided a strong foundation for the proposed implementation of an Olympic Stadium in the next section.
+Mega Racer is a basic game simulating a race car driving through a wilderness area. The basic game logic, movement and sun light has been provided in the code. Additionally, examples files for the object models, textures and map have been provided and were used for this implementation. There are two tiers of task; basic and advanced. All of the tier 1 tasks were completed successfully as well as the first three tasks from tier 2; improved terrain textures, and the addition of fog and props. These tasks provided a strong foundation for the proposed implementation of an Olympic Stadium in the next section. 
 
 %% TIER 1
 \subsection{Tier 1}
@@ -102,13 +108,13 @@ These are the basic deliverables that highlight a basic understanding of compute
 
 %& 1.1
 \subsubsection{1.1 - Scale the terrain grid}
-The map of the world is a RGB image for simplicity. Fundamentally this image is simply a grid of pixels, each of which is an addressable colour sample (Lecture 1). The provided map and game logic relies on the value of the red pixel to indicate the height of the terrain, with 255 as the maximum height. The provided code normalises the R pixel value by dividing it by this maximum value to be a value between 0 and 1, and assigned as 'red'. By multiplying this variable with the provided uniform scaling variable, heightScale, all axis will be scaled to the appropriate units of the world space, in this case 75 metres, for a realistic appearance (Lecture 2). This operation is assigned to the zPos of the terrain when it loads in terrain.py to set the height, as well as uncommenting the last line from racer.py so the racer can follow the height.   
+The map of the world is a RGB image for simplicity. Fundamentally this image is simply a grid of pixels, each of which is an addressable colour sample [43]. The provided map and game logic relies on the value of the red pixel to indicate the height of the terrain, with 255 as the maximum height. The provided code normalises the R pixel value by dividing it by this maximum value to be a value between 0 and 1, and assigned as 'red'. By multiplying this variable with the provided uniform scaling variable, heightScale, all axis will be scaled to the appropriate units of the world space, in this case 75 metres, for a realistic appearance [44]. This operation is assigned to the zPos of the terrain when it loads in terrain.py to set the height, as well as uncommenting the last line from racer.py so the racer can follow the height.   
     \begin{lstlisting}
-    # terrain.py
-    def load(...):
-        ...
-        zPos = red * self.heightScale
-        ...
+# terrain.py
+def load(...):
+    ...
+    zPos = red * self.heightScale
+    ...
     \end{lstlisting}
 
     \begin{figure} [H]
@@ -121,24 +127,24 @@ The map of the world is a RGB image for simplicity. Fundamentally this image is 
 
 %% 1.2
 \subsubsection{1.2 - Set up a camera to follow the racer}
-In this task the coordinate system of the view space will be determined, as the view space is simply the space as seen by the camera. This coordinate system is the result of transforming the world space so that the object is in front of a users view, through a combination of translations and rotations (Lecture 2). In the code, there is a variable clearly labelled worldToViewTransform which is assigned the output of lu.make\_lookAt(). This function then calls lu.make\_lookFrom() with a modified target parameter for smooth movement. A very similar process is followed in the example from lab2. 
+In this task the coordinate system of the view space will be determined, as the view space is simply the space as seen by the camera. This coordinate system is the result of transforming the world space so that the object is in front of a users view, through a combination of translations and rotations [44]. In the code, there is a variable clearly labelled worldToViewTransform which is assigned the output of lu.make\_lookAt(). This function then calls lu.make\_lookFrom() with a modified target parameter for smooth movement. A very similar process is followed in the example from lab 2 [50]. 
     \begin{lstlisting}
-    # Lab 2 (1) - Q5, Lab 2 (2) 
-    worldToViewTransform = magic.make_lookAt(eyePos, [0,0,0], [0,1,0])
-    worldToViewTransform = magic.make_lookFrom(g_cameraPosition, cameraDirection, [0,1,0])
+# Lab 2 (1) - Q5, Lab 2 (2) 
+worldToViewTransform = magic.make_lookAt(eyePos, [0,0,0], [0,1,0])
+worldToViewTransform = magic.make_lookFrom(g_cameraPosition, cameraDirection, [0,1,0])
 
-    # mega_racer.py 
-    def renderFrame(...):
-        ...
-        view.worldToViewTransform 
-            = lu.make_lookAt(g_viewPosition, g_viewTarget, g_viewUp)
-    -->
-    # lab_utils.py
-    def make_lookAt(eye,target,up):
-        return make_lookFrom(eye, np.array(target[:3]) - np.array(eye[:3]), up)
-    --> 
-    def make_lookFrom(eye,direction,up):
-        .....
+# mega_racer.py 
+def renderFrame(...):
+    ...
+    view.worldToViewTransform 
+        = lu.make_lookAt(g_viewPosition, g_viewTarget, g_viewUp)
+-->
+# lab_utils.py
+def make_lookAt(eye,target,up):
+    return make_lookFrom(eye, np.array(target[:3]) - np.array(eye[:3]), up)
+--> 
+def make_lookFrom(eye,direction,up):
+    .....
     \end{lstlisting}
 
 There are four key variables when creating a virtual camera; Up, Camera Position, View Direction and View Target. From the code, the meaning of each of the variables can be understood so they can be appropriately assigned so the world to view transformation is accurate. All of these variables are vectors with xyz coordinates and currently these variables only have default values.
@@ -155,28 +161,28 @@ In order for the camera view to be relative to the movement of the racer these v
 
 \textbf{Attempt 1 - Direction Missing}: The result after running these changes performed the calculation of a view space coordinate system that now updated relative to the racer and was in a better position. However, the movement of the racer to the movement of the camera was the opposite and the rotation transformation was off. The camera position should have a relationship with both the view target and view direction, but the view direction has not been taken into consideration. 
     \begin{lstlisting}
-    # mega_racer.py
-    def update(...):
-        ...
-        g_viewTarget = g_racer.position.copy()
-        g_viewTarget[2] += g_followCamLookOffset
+# mega_racer.py
+def update(...):
+    ...
+    g_viewTarget = g_racer.position.copy()
+    g_viewTarget[2] += g_followCamLookOffset
 
-        g_viewPosition = g_racer.position + (g_followCamOffset)
-        g_viewPosition[2] += g_followCamOffset
+    g_viewPosition = g_racer.position + (g_followCamOffset)
+    g_viewPosition[2] += g_followCamOffset
     \end{lstlisting}
 
 \textbf{Attempt 2 - Correct to specification}:
 On closer inspection of the Racer class, \textit{heading} controls the direction of the racer. Since the camera needed to be behind the racer, the camera position (g\_viewPosition) had to be multiplied by the inverse of the racer direction using vector multiplication. This produced the correct result in relation to the position of the racer with the offsets applied at the appropriate direction to the racer's movement.
 
 \begin{lstlisting}
-    # mega_racer.py
-    def update(...):
-        ...
-        g_viewTarget = g_racer.position.copy()
-        g_viewTarget[2] += g_followCamLookOffset
-    
-        g_viewPosition = g_racer.position + (g_followCamOffset * -g_racer.heading)
-        g_viewPosition[2] += g_followCamOffset
+# mega_racer.py
+def update(...):
+    ...
+    g_viewTarget = g_racer.position.copy()
+    g_viewTarget[2] += g_followCamLookOffset
+
+    g_viewPosition = g_racer.position + (g_followCamOffset * -g_racer.heading)
+    g_viewPosition[2] += g_followCamOffset
 \end{lstlisting}
 
 \begin{figure} [H]
@@ -187,16 +193,16 @@ On closer inspection of the Racer class, \textit{heading} controls the direction
     \caption{1.2 - Camera follow racer - Attempts}
 \end{figure}
 
-Although the correct position was calculated, a more intimate view of the racer was desired. So instead the viewTarget was set to equal the racer's position, and the g\_followCamLookOffset was added to the z coordinate of the view position. This placed the camera at the same distance above and behind, but instead the racer is in the centre of the camera view.
+Although the correct position was calculated, a more intimate view of the racer was desired. So instead the viewTarget was set to equal the racer's position, and the g\_followCamLookOffset was added to the z coordinate of the view position. This placed the camera at the same distance above and behind, but instead the racer is in the centre of the camera view. This achieves a view with the racer at centre of attention with good eye scan, unity and compositional balance [5,6] which provides the optimal camera view for the next section when modifying to the Olympic Stadium.
     \begin{lstlisting}
-    # mega_racer.py
-    def update(...):
-        ...
-        g_viewTarget = g_racer.position
+# mega_racer.py
+def update(...):
+    ...
+    g_viewTarget = g_racer.position
 
-        g_viewPosition = g_racer.position + (g_followCamOffset * -g_racer.heading)
-        g_viewPosition[2] += g_followCamLookOffset
-        ...
+    g_viewPosition = g_racer.position + (g_followCamOffset * -g_racer.heading)
+    g_viewPosition[2] += g_followCamLookOffset
+    ...
     \end{lstlisting}
 
     \begin{figure} [H]
@@ -213,21 +219,21 @@ This section follows the process of an object to world space transformation. The
 
 \textbf{(1) Rendering the model}: In \textit{mega\_racer.renderFrame()} the racer is being rendered in the world by calling \textit{racer.render()}. This is where the model of the racer needs to be drawn. 
     \begin{lstlisting}    
-    # mega_racer.py
-    def renderFrame(...):
-        ...
-        g_racer.render(view, g_renderingSystem)  
-    -->
-    #racer.py - Racer
-    def render(self, view, renderingSystem):
-        .....
+# mega_racer.py
+def renderFrame(...):
+    ...
+    g_racer.render(view, g_renderingSystem)  
+-->
+#racer.py - Racer
+def render(self, view, renderingSystem):
+    .....
     \end{lstlisting}  
 
 To render the racer model, it must be drawn and replace the sphere. To draw the object, as per the project notes, \textit{renderingSystem.drawObjModel()} was used. The parameter, \textit{renderingSystem}, is of RenderingSystem class which provides access to \textit{drawObjModel()}. 
     \begin{lstlisting}
-    # mega_racer.py - RenderingSystem
-    def drawObjModel(self, model, modelToWorldTransform, view):
-        ...
+# mega_racer.py - RenderingSystem
+def drawObjModel(self, model, modelToWorldTransform, view):
+    ...
     \end{lstlisting} 
 
 This function has three parameters:
@@ -236,20 +242,20 @@ This function has three parameters:
     \item view: The the view is of ViewParams class and is set up to project and transform from view to clip space, and world to view space. It is passed in as an argument to \textit{render}.
     \item worldToViewTransform: To transform the model from its object space to the world space a number of matrix operations need to be performed. The project notes mention \textit{make\_mat4\_from\_zAxis()} lab\_utils.py (imported as lu in racer.py) as a useful function to create a transformation matrix. The functions transform the orientation (rotation) and position/movement (translation) of the model by aligning the z-axis exactly with v, the y-axis roughly with u and the the translation is p (Lecture 3).   
     \begin{lstlisting} 
-        #lab_utils.py    
-        def make_mat4_from_zAxis(translation, zAxis, yAxis):
-        ...    
+#lab_utils.py    
+def make_mat4_from_zAxis(translation, zAxis, yAxis):
+...    
     \end{lstlisting}    
     The takes three parameters; translation, zAxis and yAxis. The zAxis represents forwards and the yAxis represents up. Therefore, for this world, the z and y axis will act conventionally to the same. This means that the z-axis is the same as the direction of the racer (\textit{g\_racer.heading}) and the y-axis is equal to up view of the racer (\textit{g\_viewUp}. This provides the easiest solution for rendering the racer. The translation parameter refers to the movement along a vector of model after all the relevant modifications to the coordinates, in this case that is the position of the racer.    
 \end{itemize}
 
 With all of the parameters now provided and declared the object model can be rendered. It is important to note that with the above decision to set the z-axis as forwards all object models were set to the same. Also the handedness of openGL is right handed, as well as blender which ensures no issues with rotation. However, at this stage after running the code there was an error message relating to the model; it is of none type. So the next step is to create and load the racer model in load(). 
 \begin{lstlisting}
-    # racer.py - Racer
-    def render(self, view, renderingSystem):
-        modelToWorldTransform = 
-            lu.make_mat4_from_zAxis(self.position, self.heading, [0.0, 0.0, 1.0])
-        renderingSystem.drawObjModel(self.model, worldToViewTransform, view)
+# racer.py - Racer
+def render(self, view, renderingSystem):
+    modelToWorldTransform = 
+        lu.make_mat4_from_zAxis(self.position, self.heading, [0.0, 0.0, 1.0])
+    renderingSystem.drawObjModel(self.model, worldToViewTransform, view)
 \end{lstlisting}
 
     \begin{figure} [H]
@@ -287,10 +293,10 @@ The purpose of \textit{load()} is to create and load the racer model. According 
 
 %% 1.4
 \subsubsection{1.4 - Texture the terrain}
-Textures are a cheap and simple way to add detail that could not otherwise be provided simply by geometric modelling. Texture mapping is simply 'gluing images to surfaces' (Lecture 6). In this task a grass texture will be added over the whole world using 2D texturing. To repeat the texture every metre tiling (texture repetition) will be used to continuously repeat the image to avoid loss of resolution. There are three steps to complete this section in terrain.py. 
+Textures are a cheap and simple way to add detail that could not otherwise be provided simply by geometric modelling. Texture mapping is simply 'gluing images to surfaces' [47]. In this task a grass texture will be added over the whole world using 2D texturing. To repeat the texture every metre tiling (texture repetition) will be used to continuously repeat the image to avoid loss of resolution. There are three steps to complete this section in terrain.py. 
 
 \textbf{(1) render() - Bind the grass texture to the right texture unit.} \\ 
-In order to bind the texture, the hint is to is to use lu.bindTexture. This function, bindTexture(), takes two arguments texUnit and textureId. A similar function, with the same name, is used specifically in lab 5 question 12 (Lab Code, 2020). Additionally, setUniform() needs to be called to prepare the texture for the shader. 
+In order to bind the texture, the hint is to is to use lu.bindTexture. This function, bindTexture(), takes two arguments texUnit and textureId. A similar function, with the same name, is used specifically in lab 5 question 12 [50]. Additionally, setUniform() needs to be called to prepare the texture for the shader. 
     \begin{lstlisting}
 # Lab - lab_utils.py 
 def bindTexture(texUnit, textureId, textureType = GL_TEXTURE_2D):
@@ -316,7 +322,7 @@ def render(...):
     \end{lstlisting}
 
 \textbf{(2) load(): Compute the texture coordinates and sample the texture for the grass and use as material colour.} \\
-As per the project notes the variable textureXyScale is to be used to scale the texture coordinates and is already set to a factor of 0.1 so the texture repeats every 10 metres. Also the world space coordinates should be used to sample the texture in the fragment shader. To determine how to set the sample, question 12 from lab 5 provided insight into how to set the texture as the colour in the fragment shader.
+As per the project notes the variable textureXyScale is to be used to scale the texture coordinates and is already set to a factor of 0.1 so the texture repeats every 10 metres. Also the world space coordinates should be used to sample the texture in the fragment shader. To determine how to set the sample, question 12 from lab 5 [50] provided insight into how to set the texture as the colour in the fragment shader.
 \begin{lstlisting}
 # Lab 5 - Q12  
 g_texCoordScale = 7.0
@@ -359,8 +365,8 @@ def load():
 From this example it is evident that for the materialColour (i.e. detailColour) to reflect the texture it needs to be assigned the output of texture() with the following three arguments:
     \begin{itemize}
         \item detailTexture: The grass colour is similar to the detailColour so the detailTexture is equivalent to the grassTexture.
-        \item v2f\_textureCoord: In lab 5 the v2f\_textureCoord is a 2 dimensional out vector from the vertex shader. It refers to the location in texture space. As per the project notes, since the vertex is regular, this same behaviour can be replicated by only selecting the x and y coordinates of the world space which are stored in v2f\_worldSpacePosition.
-        \item texCoordScale: The textCoordScale variable in lab 5 refers to \textit{g\_texCoordScale} in mega racer which is declared and uniformly set for the shader as texCoordScale. The same is done for textureXyScale in Terrain which as mentioned is nominated in the project notes as the scale for the texture coordinates.
+        \item v2f\_textureCoord: In lab 5 [50] the v2f\_textureCoord is a 2 dimensional out vector from the vertex shader. It refers to the location in texture space. As per the project notes, since the vertex is regular, this same behaviour can be replicated by only selecting the x and y coordinates of the world space which are stored in v2f\_worldSpacePosition.
+        \item texCoordScale: The textCoordScale variable in lab 5 [50] refers to \textit{g\_texCoordScale} in mega racer which is declared and uniformly set for the shader as texCoordScale. The same is done for textureXyScale in Terrain which as mentioned is nominated in the project notes as the scale for the texture coordinates.
     \end{itemize}
 
 Putting this all together, the texture coordinates were calculated and the texture of the grass was sampled to override the existing material colour.
@@ -382,7 +388,7 @@ def load(...):
     \end{lstlisting}
 
 \textbf{(3) load() - fragmentShader: Load texture and configure the sampler.} \\
-Also in lab 5, in initResources() after declaring the shader the image is opened and the texture is mapped (glTextParameter), then the texture is loaded using lu.loadTexture(). A similar function can be found in the ObjModel.py (instead of lab\_utils.py) and performs the same actions. It also sets the texture to wrap repeatedly as desired.
+Also in lab 5 [50], in initResources() after declaring the shader the image is opened and the texture is mapped (glTextParameter), then the texture is loaded using lu.loadTexture(). A similar function can be found in the ObjModel.py (instead of lab\_utils.py) and performs the same actions. It also sets the texture to wrap repeatedly as desired.
     \begin{lstlisting}  
 # Lab 5 
 g_detailTexture = lu.loadTexture("data/details.jpg");
@@ -426,26 +432,29 @@ The project notes explain that the code for the light should be added to the com
 #  mega_racer.py - RenderingSystem
 def setupObjModelShader(...):
     v2f_viewSpaceNormal = normalize(modelToViewNormalTransform * normalAttribute);
-    v2f_viewSpacePosition = (modelToViewTransform * vec4(positionAttribute, 1.0)).xyz;
+    v2f_viewSpacePosition = (modelToViewTransform 
+                                * vec4(positionAttribute, 1.0)).xyz;
     .....
     vec3 materialDiffuse = texture(diffuse_texture, 
                                     v2f_texCoord).xyz 
                                     * material_diffuse_color;
     vec3 reflectedLight = computeShading(materialDiffuse, 
-                                            v2f_viewSpacePosition, v2f_viewSpaceNormal, viewSpaceLightPosition, 
+                                            v2f_viewSpacePosition, 
+                                            v2f_viewSpaceNormal, 
+                                            viewSpaceLightPosition, 
                                             sunLightColour
                                         ) + material_emissive_color;
     \end{lstlisting}
 
 When computing the light, the following tips must be adhered to:
     \begin{itemize}     
-        \item All parameters om shading must be the same space -> set as view space (same as lab 4)         
+        \item All parameters om shading must be the same space -> set as view space (same as lab 4 [50])         
         \item The computeShading function needs to be called from each function -> this is already done.
         \item Need to make sure don't just have Lambertian term -> Fixed by multiplying by materialDiffuse term.
         \item Use clamping to check when light is behind surface.
     \end{itemize}
 
-To create the lighting effect required, all of the code followed that of fragmentShader.glsl in Lab 4. Question 1 was already provided as a basic shader. The view space is used for shading calculations. The computeShading() function is setup with five parameters, all of which are used to return a light value.
+To create the lighting effect required, all of the code followed that of fragmentShader.glsl in Lab 4 [50]. Question 1 was already provided as a basic shader. The view space is used for shading calculations. The computeShading() function is setup with five parameters, all of which are used to return a light value.
     \begin{lstlisting}
 # mega_racer.py - RenderingSystem
 commonFragmentShaderCode =
@@ -461,7 +470,7 @@ commonFragmentShaderCode =
     \end{lstlisting}
 
 \textbf{(1) The direction towards the source of the light.} \\
-Starting from Lab 4, question 2, the first step was to compute the normalised direction towards the light from the shading point in view space. The light position is stored as viewSpaceLightPosition and the current point is viewSpacePosition (provided by the vertex shader). 
+Starting from Lab 4 [50], question 2, the first step was to compute the normalised direction towards the light from the shading point in view space. The light position is stored as viewSpaceLightPosition and the current point is viewSpacePosition (provided by the vertex shader). 
     \begin{lstlisting}
 # Lab 4 - Q2 - FragmentShader
 vec3 viewSpaceDirToLight = normalize(viewSpaceLightPosition - viewSpacePosition);
@@ -534,10 +543,11 @@ commonFragmentShaderCode =
     \end{figure}
     
 \textbf{(4) Diffuse Lambertian Reflection.}
-The bidirectional reflection distribution (BRDF) is used widely to model how surfaces reflect light (Lecture 5). To diffuse the Lambertian reflection by multiplying the incoming light with a constant that represents the reflection of the material for the given spectrum. Following the same pattern as question 3 in lab 4, the argument passed as materialColour should provide this representation, as provided by the materialDiffuse variable passed in to computeShading() in setUpObModelShader(). 
+The bidirectional reflection distribution (BRDF) is used widely to model how surfaces reflect light [46]. To diffuse the Lambertian reflection by multiplying the incoming light with a constant that represents the reflection of the material for the given spectrum. Following the same pattern as question 3 in lab 4 [50], the argument passed as materialColour should provide this representation, as provided by the materialDiffuse variable passed in to computeShading() in setUpObModelShader(). 
     \begin{lstlisting} 
 # Lab 4  - FragmentShader
-vec3 materialDiffuse = texture(diffuse_texture, v2f_texCoord).xyz * material_diffuse_color;
+vec3 materialDiffuse = texture(diffuse_texture, v2f_texCoord).xyz 
+                                * material_diffuse_color;
 vec3 outgoingLight = incomingLight * materialDiffuse;
 
 # mega_racer.py - RenderingSystem
@@ -563,7 +573,7 @@ commonFragmentShaderCode =
     \end{figure}
 
 \textbf{(5) Take into account the indirect light.}
-In order to handle indirect lighting, it is replaced by a constant that is known as ambient lighting. This step builds on step 3 and follows question 4 in lab 4. As mentioned in the notes, this is an approximation with a single colour value. The ambience is added to the incomingLight variable as there is the light comes from everywhere, and then multiplied by the BRDF as both are independent.
+In order to handle indirect lighting, it is replaced by a constant that is known as ambient lighting. This step builds on step 3 and follows question 4 in lab 4 [50]. As mentioned in the notes, this is an approximation with a single colour value. The ambience is added to the incomingLight variable as there is the light comes from everywhere, and then multiplied by the BRDF as both are independent.
     \begin{lstlisting}[language=c++] 
 # Lab 4  - FragmentShader
 vec3 outgoingLight = (incomingLight + ambientLightColourAndIntensity) 
@@ -594,7 +604,7 @@ This has produced the final results, light that doesn't cause pitch black and re
         \caption{1.5 - Step 5}   
     \end{figure}
 
-\textbf{Side notes:} There are many other lighting models that could have been introduced; including a more advance ambient model or specular lighting. 
+\textbf{Side notes:} There are many other lighting models that could have been introduced; including a more advanced ambient model or specular lighting. 
 
 
 %%%% TIER 2 %%%%%%%
@@ -632,33 +642,33 @@ terrainHeightScale = self.heightScale
 
 The same steps as the grass texture are followed including declaring a unit, the texture variable, binding the texture, setting the uniform value and loading the texture. However, sampling the texture is slightly different as instead of overriding the materialColour with the highColour, the highColour is assigned in the same way at the given height and then the materialColour is assigned as the output of blending this highColour with the grassColour using mix().
 \begin{lstlisting}
-    # terrain.py
-    TU_High = 1
-    highTexture = None
+# terrain.py
+TU_High = 1
+highTexture = None
+
+def render():
+    ....
+    lu.bindTexture(self.TU_High, self.highTexture)
+    lu.setUniform(self.shader, "highTexture", self.TU_High)
+
+def load():
+    fragmentShader = 
+        ...
+        uniform sampler2D highTexture;
+
+        void main():
+        {   ....
+            OR if (v2f_height > 50) {
+            if ((v2f_height/terrainHeightScale) > 0.9) {
+                vec3 highColour = texture(highTexture, 
+                                    v2f_worldSpacePosition.xy 
+                                    * terrainTextureXyScale).xyz;
+                materialColour = mix(materialColour, 
+                                    highColour, 
+                                    (v2f_height/terrainHeightScale));
+        } 
     
-    def render():
-        ....
-        lu.bindTexture(self.TU_High, self.highTexture)
-        lu.setUniform(self.shader, "highTexture", self.TU_High)
-    
-    def load():
-        fragmentShader = 
-            ...
-            uniform sampler2D highTexture;
-    
-            void main():
-            {   ....
-                OR if (v2f_height > 50) {
-                if ((v2f_height/terrainHeightScale) > 0.9) {
-                    vec3 highColour = texture(highTexture, 
-                                        v2f_worldSpacePosition.xy 
-                                        * terrainTextureXyScale).xyz;
-                    materialColour = mix(materialColour, 
-                                        highColour, 
-                                        (v2f_height/terrainHeightScale));
-            } 
-        
-        self.highTexture = ObjModel.loadTexture("rock 2.png", "data", True)        
+    self.highTexture = ObjModel.loadTexture("rock 2.png", "data", True)        
         \end{lstlisting}
 
     \begin{figure} [H]
@@ -672,56 +682,61 @@ The same steps as the grass texture are followed including declaring a unit, the
 \textbf{(2) Set the steep texture}
 The steep texture relies on only be loaded when the slope meets a certain threshold. To get the slope, first the coordinates of the normalised world space need to be available. The viewSpacePosition, viewSpaceNormal and worldSpacePosition had already been provided, and so the same pattern was followed to have access to the worldSpaceNormal.
     \begin{lstlisting}
-    vertexShader =
-        out VertexData
-        {
-            vec3 v2f_viewSpacePosition;
-            vec3 v2f_viewSpaceNormal;
-            vec3 v2f_worldSpacePosition;
-            vec3 v2f_worldSpaceNormal; // NEW
-        }
-        void main()
-        {
-            v2f_viewSpacePosition = (modelToViewTransform * vec4(positionIn, 1.0)).xyz;
-            v2f_viewSpaceNormal = modelToViewNormalTransform * normalIn;
-            v2f_worldSpacePosition = positionIn;
-            v2f_worldSpaceNormal = normalIn; // NEW
-        }
-    fragmentShader = 
-        in VertexData
-        {
-            vec3 v2f_viewSpacePosition;
-            vec3 v2f_viewSpaceNormal;
-            vec3 v2f_worldSpacePosition;
-            vec3 v2f_worldSpaceNormal; // NEW
-        }
+vertexShader =
+    out VertexData
+    {
+        vec3 v2f_viewSpacePosition;
+        vec3 v2f_viewSpaceNormal;
+        vec3 v2f_worldSpacePosition;
+        vec3 v2f_worldSpaceNormal; // NEW
+    }
+    void main()
+    {
+        v2f_viewSpacePosition = (modelToViewTransform * vec4(positionIn, 1.0)).xyz;
+        v2f_viewSpaceNormal = modelToViewNormalTransform * normalIn;
+        v2f_worldSpacePosition = positionIn;
+        v2f_worldSpaceNormal = normalIn; // NEW
+    }
+fragmentShader = 
+    in VertexData
+    {
+        vec3 v2f_viewSpacePosition;
+        vec3 v2f_viewSpaceNormal;
+        vec3 v2f_worldSpacePosition;
+        vec3 v2f_worldSpaceNormal; // NEW
+    }
     \end{lstlisting}
 
 Now that the normalised world space is available to use, the slope needs to be calculated and compared to the threshold to determine when to blend the textures. Again, the same steps are followed to map the texture, however the slope is calculated and then the logic of the threshold applied. 
     \begin{lstlisting}
-    # terrain.py
-    TU_Steep = 2
-    steepTexture = None
+# terrain.py
+TU_Steep = 2
+steepTexture = None
 
-    def render():
-        ....
-        lu.bindTexture(self.TU_Steep, self.steepTexture)
-        lu.setUniform(self.shader, "steepTexture", self.TU_Steep)
+def render():
+    ....
+    lu.bindTexture(self.TU_Steep, self.steepTexture)
+    lu.setUniform(self.shader, "steepTexture", self.TU_Steep)
 
-    def load():
-        fragmentShader = """
-            ...
-            uniform sampler2D steepTexture;
+def load():
+    fragmentShader = """
+        ...
+        uniform sampler2D steepTexture;
 
-            void main()
-            {....
-                float slope = dot(v2f_worldSpaceNormal, vec3(v2f_worldSpaceNormal.x, 0.0, v2f_worldSpaceNormal.z));
-                if (slope < 0.8) {
-                    vec3 steepColour = texture(steepTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                    materialColour = mix(materialColour, steepColour, (v2f_height/terrainHeightScale));
-            } 
+        void main()
+        {....
+            float slope = dot(v2f_worldSpaceNormal, vec3(v2f_worldSpaceNormal.x, 
+                                                            0.0, 
+                                                            v2f_worldSpaceNormal.z));
+            if (slope < 0.8) {
+                vec3 steepColour = texture(steepTexture, 
+                                    v2f_worldSpacePosition.xy 
+                                        * terrainTextureXyScale).xyz;
+                materialColour = mix(materialColour, steepColour, 
+                                    (v2f_height/terrainHeightScale));
+        } 
 
-        self.steepTexture = ObjModel.loadTexture("rock 5.png", "data", True)
+    self.steepTexture = ObjModel.loadTexture("rock 5.png", "data", True)
     \end{lstlisting}
 
     \begin{figure} [H]
@@ -736,77 +751,80 @@ Now that the normalised world space is available to use, the slope needs to be c
 To load a texture for the road, since the game logic is not available to the fragment shader, a mapTexture needed to be created which could identify the \textit{blueChannel} of the map for the shader. As previously mentioned, the blue pixel on the map is used to represent the road and subsequently the logic of the racer's speed. Since the track image is not a 2D file, when calling ObjModel.loadTexture the SRGB parameter is passed is False. As well as creating this map texture, a road texture also needs to be created, following the same steps as the grass texture. However, the logic in the fragmentShader was quite different and will be explained separately.
 
 \begin{lstlisting}
-    # terrain.py
-    TU_Road = 3
-    TU_Map = 4
-    roadTexture = None
-    mapTexture = None
+# terrain.py
+TU_Road = 3
+TU_Map = 4
+roadTexture = None
+mapTexture = None
 
-    def render():
-        ....
-        lu.bindTexture(self.TU_Road, self.roadTexture)
-        lu.bindTexture(self.TU_Map, self.roadMap)
-        lu.setUniform(self.shader, "roadTexture", self.TU_Road)
-        lu.setUniform(self.shader, "mapTexture", self.TU_Map)
+def render():
+    ....
+    lu.bindTexture(self.TU_Road, self.roadTexture)
+    lu.bindTexture(self.TU_Map, self.roadMap)
+    lu.setUniform(self.shader, "roadTexture", self.TU_Road)
+    lu.setUniform(self.shader, "mapTexture", self.TU_Map)
 
-    def load():
-        fragmentShader = 
-            ...
-            uniform sampler2D roadTexture;
-            uniform sampler2D mapTexture;
+def load():
+    fragmentShader = 
+        ...
+        uniform sampler2D roadTexture;
+        uniform sampler2D mapTexture;
 
-            void main():
-            {   ....
-                ????
-            }
-            }
-        
-        self.roadTexture = ObjModel.loadTexture("paving 5.png", "data", True)
-        self.mapTexture = ObjModel.loadTexture("track_01_128.png", "data", False)
+        void main():
+        {   ....
+            ????
+        }
+        }
+    
+    self.roadTexture = ObjModel.loadTexture("paving 5.png", "data", True)
+    self.mapTexture = ObjModel.loadTexture("track_01_128.png", "data", False)
 \end{lstlisting}
 
 For the high and steep textures, the shader was relying simply on the height and slope, but now to for the shader to know what is considered 'road' the blueChannel needs to be calculated using the mapTexture. To be able to sample this texture the first step was to get the normalised texture coordinates. This was possible by following the similar steps to the worldSpaceNormal but with the xyNormScale and xyOffset. These were the last two declared variables in the vertex shader that hadn't been carried through to the fragment shader despite being declared as uniform in render() at the same time as the Texture XyScale and HeightScale. It was obvious that the xyNormScale variable would be used instead of terrainTextureXyScale, but the purpose of the offset was unclear at this time. 
     \begin{lstlisting}
-    # render()      
-    xyNormScale = 1.0 / (vec2(self.imageWidth, self.imageHeight) * self.xyScale);
-    lu.setUniform(self.shader, "xyNormScale", xyNormScale);
-    xyOffset = -(vec2(self.imageWidth, self.imageHeight) + vec2(1.0)) * self.xyScale / 2.0;
-    lu.setUniform(self.shader, "xyOffset", xyOffset);
-    --> 
+# render()      
+xyNormScale = 1.0 / (vec2(self.imageWidth, self.imageHeight) * self.xyScale);
+lu.setUniform(self.shader, "xyNormScale", xyNormScale);
+xyOffset = -(vec2(self.imageWidth, self.imageHeight) + vec2(1.0)) * self.xyScale / 2.0;
+lu.setUniform(self.shader, "xyOffset", xyOffset);
+--> 
 
-    # load()
-    vertexShader =
-        out VertexData
-        {
-            vec2 v2f_xyNormScale;
-            vec2 v2f_xyOffset;
-        }
-        void main()
-        {
-            v2f_xyNormScale = xyNormScale;
-            v2f_xyOffset = xyOffset;
-        }
-    fragmentShader = 
-        in VertexData
-        {
-            vec2 v2f_xyNormScale;
-            vec2 v2f_xyOffset;
-        }
+# load()
+vertexShader =
+    out VertexData
+    {
+        vec2 v2f_xyNormScale;
+        vec2 v2f_xyOffset;
+    }
+    void main()
+    {
+        v2f_xyNormScale = xyNormScale;
+        v2f_xyOffset = xyOffset;
+    }
+fragmentShader = 
+    in VertexData
+    {
+        vec2 v2f_xyNormScale;
+        vec2 v2f_xyOffset;
+    }
         \end{lstlisting}
 
 When working on this section, it was often difficult to determine the problem, as unless the texture was declared, bound and loaded properly in the shader nothing would display. The below code is the first iteration that provided 'working' shading. The blueChannel variable followed that of the other textures, though instead of multiplying the worldSpacePosition.xy by the terrainTextureXyScale it was multiplied by the xyNormScale variable and only the z coordinate needed to be stored. The threshold of 0.9 was chosen as this produced the most accurate result. 
     \begin{lstlisting}
-    # terrain.py       
-    def load():
-        fragmentShader =                 
-            void main():
-            {   ....
-            float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy) * v2f_xyNormScale).z;
-            if (blueChannel >= 0.9) {
-                vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                materialColour =  mix(materialColour, roadColour, (v2f_height/terrainHeightScale));
-                }
+# terrain.py       
+def load():
+    fragmentShader =                 
+        void main():
+        {   ....
+        float blueChannel = texture(mapTexture, v2f_worldSpacePosition.xy 
+                                                    * v2f_xyNormScale).z;
+        if (blueChannel >= 0.9) {
+            vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy 
+                                                    * terrainTextureXyScale).xyz;
+            materialColour =  mix(materialColour, roadColour, 
+                                    (v2f_height/terrainHeightScale));
             }
+        }
     \end{lstlisting} 
 
 \begin{figure} [H]
@@ -835,12 +853,15 @@ There are clearly still some issues to resolve.
 
 After making these changes, the paving was successfully sampled and loading correctly onto the correct coordinates for the road according to the blue channel of the track.
     \begin{lstlisting}
-    # terrain.py       
-    float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy - v2f_xyOffset) * v2f_xyNormScale).z;
-    if (blueChannel >= 0.9) {
-        vec3 roadColour = texture(roadTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-            materialColour = roadColour;
-    }
+# terrain.py       
+float blueChannel = texture(mapTexture, 
+                                (v2f_worldSpacePosition.xy - v2f_xyOffset) 
+                                    * v2f_xyNormScale).z;
+if (blueChannel >= 0.9) {
+    vec3 roadColour = texture(roadTexture, 
+                        v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
+        materialColour = roadColour;
+}
     \end{lstlisting} 
 
     \begin{figure} [H]
@@ -856,7 +877,7 @@ After making these changes, the paving was successfully sampled and loading corr
 Adding fog to the world was an attempt to provide the opportunity to add realism, depth, scaling of objects, give distance cues and more lighting effects to the world. The provided tutorial in the project notes was followed for this step to implement basic and then height-based fog.
 
 \textbf{(1) Colour based fog)}
-The first step of the tutorial was to implement colour to the fog, though it was referred to as scattering. This aimed to provide some context as to the strength of the sun by making the colour dependent on orientation. The b variable refers to the density and is set to 0.005 because ...... This function was declared in commonFragmentShaderCode in mega\_racer.py, then called as the output to fragmentColour in the fragmentShader. The relevant variables for the parameters are as follows:
+The first step of the tutorial was to implement colour to the fog, though it was referred to as scattering. This aimed to provide some context as to the strength of the sun by making the colour dependent on orientation. The b variable refers to the density and is set to 0.005 as per [3]. This function was declared in commonFragmentShaderCode in mega\_racer.py, then called as the output to fragmentColour in the fragmentShader. The relevant variables for the parameters are as follows:
     \begin{itemize}
         \item rgb = reflectedLight: This is currently the argument passed into toSrgb as for the 'color' parameter, so it will perform the same purpose as the 'rgb' parameter for applyFog().
         \item distance = -v2f\_viewSpacePosition.z \\      
@@ -864,36 +885,35 @@ The first step of the tutorial was to implement colour to the fog, though it was
     \end{itemize}
 
     \begin{lstlisting}
-    # Tutorial
-    vec3 applyFog( in vec3  rgb, in float distance )
+# Tutorial
+vec3 applyFog( in vec3  rgb, in float distance )
+{
+    float fogAmount = 1.0 - exp( -distance*b );
+    vec3  fogColor  = vec3(0.5,0.6,0.7);
+    return mix( rgb, fogColor, fogAmount );
+}
+-->
+# mega_racer.py - Rendering system
+commonFragmentShaderCode = 
+    ...
+    vec3 applyFog(in vec3 rgb, in float distance)
     {
-        float fogAmount = 1.0 - exp( -distance*b );
+        float b = 0.005;
+        float fogAmount = 1.0 - exp(-distance*b);
         vec3  fogColor  = vec3(0.5,0.6,0.7);
-        return mix( rgb, fogColor, fogAmount );
+        return mix(rgb, fogColor, fogAmount);
     }
-    -->
-    # mega_racer.py - Rendering system
-    commonFragmentShaderCode = 
+#terrain.py
+def load(...):
+    ...
+    fragmentShader = 
         ...
-        vec3 applyFog(in vec3 rgb, in float distance)
+        void main()
         {
-            float b = 0.005;
-            float fogAmount = 1.0 - exp(-distance*b);
-            vec3  fogColor  = vec3(0.5,0.6,0.7);
-            return mix(rgb, fogColor, fogAmount);
-        }
-    #terrain.py
-    def load(...):
-        ...
-        fragmentShader = 
             ...
-            void main()
-            {
-                ...
-                fragmentColor = vec4(toSrgb(applyFog(reflectedLight, 
-                                                        -v2f_viewSpacePosition.z)), 
-                                            1.0);
-            }
+            fragmentColor = vec4(toSrgb(applyFog(reflectedLight, 
+                                        -v2f_viewSpacePosition.z)), 1.0);
+        }
     \end{lstlisting} 
 
 \begin{figure} [H]
@@ -945,66 +965,73 @@ Then an average of the two values was tested, which produced a less grey result 
 \textbf{(3) Height based}
 To take the fog one step further, the height based fog implementation from the provided tutorial was implemented. Now as well as creating a fog appearance that doesn't have a constant colour, the fog will also not have a constant density. This essentially means the intensity of the fog colour changes with distance and height to create a more interactive fog appearance so areas further away have more fog intensity. The \textit{applyFog()} function will be updated with this implementation and same as before, the call to the function also needs to be updated in fragmentShader. There are a few more variables needed as well:
     \begin{itemize}
-        \item cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2])
+        \item cameraPosition = The position of the camera in the world space, using the coordinates of \textit{worldToViewTransform} 
         \item cameraToPointVector = normalize(positionIn - cameraPosition);
     \end{itemize}
 
-The c variable is equal to a/b....
     \begin{lstlisting}
-        # Tutorial
-        vec3 applyFog( in vec3  rgb,      // original color of the pixel
-                        in float distance, // camera to point distance
-                        in vec3  rayOri,   // camera position
-                        in vec3  rayDir )  // camera to point vector
-        {
-            float fogAmount = c * exp(-rayOri.y*b) * (1.0-exp( -distance*rayDir.y*b ))/rayDir.y;
-            vec3  fogColor  = vec3(0.5,0.6,0.7);
-            return mix( rgb, fogColor, fogAmount );
-        }
-        -->
-        # mega_racer.py - Rendering system
-        commonFragmentShaderCode = 
-            ...
-            vec3 applyFog(in vec3 rgb, in float distance, in vec3  rayOri, in vec3 rayDir)
-            {
-                float b = 0.005;
-                float c = 0.66;
-                float fogAmount = c * exp(-rayOri.y*b) * (1.0-exp( -distance*rayDir.y*b ))/rayDir.y;
-                vec3  fogColor  = (sunLightColour + globalAmbientLight) / 2.0;
-                return mix( rgb, fogColor, fogAmount );
-            }
-    # terrain.python
-    def load(...):
-        ...
-        vertexShader =
-            ...
-            uniform mat4 worldToViewTransform;
+# Tutorial
+vec3 applyFog( in vec3  rgb,      // original color of the pixel
+                in float distance, // camera to point distance
+                in vec3  rayOri,   // camera position
+                in vec3  rayDir )  // camera to point vector
+{
+    float fogAmount = c * exp(-rayOri.y*b) 
+                        * (1.0-exp( -distance*rayDir.y*b ))/rayDir.y;
+    vec3  fogColor  = vec3(0.5,0.6,0.7);
+    return mix( rgb, fogColor, fogAmount );
+}
+-->
+# mega_racer.py - Rendering system
+commonFragmentShaderCode = 
+    ...
+    vec3 applyFog(in vec3 rgb, in float distance, in vec3  rayOri, in vec3 rayDir)
+    {
+        float b = 0.005;
+        float c = 0.66;
+        float fogAmount = c * exp(-rayOri.y*b) 
+                            * (1.0-exp( -distance*rayDir.y*b ))/rayDir.y;
+        vec3  fogColor  = (sunLightColour + globalAmbientLight) / 2.0;
+        return mix( rgb, fogColor, fogAmount );
+    }
 
-            out VertexData
-            {
-                ...
-                vec3 cameraPosition;
-                vec3 cameraToPointVector;
-            }
-            void main()
-            {
-                ...
-                cameraPosition = vec3(worldToViewTransform[3][0],worldToViewTransform[3][1],worldToViewTransform[3][2])
-                cameraToPointVector = normalize(positionIn - cameraPosition);
-                ...
-            }
-        fragmentShader = 
-            in VertexData
-            {
-                ...
-                vec3 cameraPosition;
-                vec3 cameraToPointVector;
-            }
-            void main()
-            {
-                ...
-                fragmentColor = vec4(toSrgb(applyFog(reflectedLight, -v2f_viewSpacePosition.z, cameraPosition, cameraToPointVector)), 1.0);
-            }
+# terrain.python
+def load(...):
+    ...
+    vertexShader =
+        ...
+        uniform mat4 worldToViewTransform;
+
+        out VertexData
+        {
+            ...
+            vec3 cameraPosition;
+            vec3 cameraToPointVector;
+        }
+        void main()
+        {
+            ...
+            cameraPosition = vec3(worldToViewTransform[3][0],
+                                    worldToViewTransform[3][1],
+                                    worldToViewTransform[3][2])
+            cameraToPointVector = normalize(positionIn - cameraPosition);
+            ...
+        }
+    fragmentShader = 
+        in VertexData
+        {
+            ...
+            vec3 cameraPosition;
+            vec3 cameraToPointVector;
+        }
+        void main()
+        {
+            ...
+            fragmentColor = vec4(toSrgb(applyFog(reflectedLight, 
+                                            -v2f_viewSpacePosition.z, 
+                                            cameraPosition, 
+                                            cameraToPointVector)), 1.0);
+        }
     \end{lstlisting} 
 \begin{figure} [H]
     \makebox[\textwidth]{%
@@ -1039,7 +1066,7 @@ class Prop:
     model = None
     \end{lstlisting}
 
-The load() function stills needs to assign the variables of each prop instance as it did in the racer, however a few things of changed. First of all the terrain variable is no longer needed. Secondly, the position is randomised from a given list based on the prop type, as well as the rotation. This is achieved by importing the 'random' library and using choice() which randomly selects an entry from a list (https://pynative.com/python-random-choice/). Finally, the model of each unique prop should only be loaded once. The model for each prop type will be created in a prop manager class and then passed in to each instance of that prop type.
+The load() function stills needs to assign the variables of each prop instance as it did in the racer, however a few things of changed. First of all the terrain variable is no longer needed. Secondly, the position is randomised from a given list based on the prop type, as well as the rotation. This is achieved by importing the 'random' library and using choice() which randomly selects an entry from a list [49]. Finally, the model of each unique prop should only be loaded once. The model for each prop type will be created in a prop manager class and then passed in to each instance of that prop type.
     \begin{lstlisting}
 #prop.py - Prop
 import random
@@ -1054,9 +1081,13 @@ The render() function needed to follow the same steps from Racer.render(), as we
     \begin{lstlisting}
 #prop.py - Prop
 def render(self, view, renderingSystem):
-    modelToWorldTransform = lu.make_mat4_from_zAxis(self.position, self.heading, [ 0.0, 0.0, 1.0 ])
+    modelToWorldTransform = lu.make_mat4_from_zAxis(self.position,
+                                                     self.heading, 
+                                                     [ 0.0, 0.0, 1.0 ])
     rotationMatrix = lu.make_rotation_y(self.rotation)
-    renderingSystem.drawObjModel(self.model, modelToWorldTransform * rotationMatrix, view)
+    renderingSystem.drawObjModel(self.model, 
+                                    modelToWorldTransform * rotationMatrix, 
+                                    view)
     \end{lstlisting}
  
 \textbf{(2) Create the PropManager class}
@@ -1094,34 +1125,36 @@ This function is called for each prop type, with their specific values, and assi
 def loadAllProps(self, terrain): 
     # Load trees
     self.treeModel = ObjModel("data/trees/birch_01_d.obj")
-    self.treeList = self.loadPropList(self.treeModel, self.treeMax, terrain.treeLocations)
+    self.treeList = self.loadPropList(self.treeModel, self.treeMax, 
+                                        terrain.treeLocations)
     # Load rocks
     self.rockModel = ObjModel("data/rocks/rock_01.obj")
-    self.rockList = self.loadPropList(self.rockModel, self.rockMax, terrain.rockLocations)
+    self.rockList = self.loadPropList(self.rockModel, self.rockMax, 
+                                        terrain.rockLocations)
     \end{lstlisting}
 
 As well as loading the props, the props will need to have a function call that renders them as well in the same way as other object models in that each prop instance is rendered individually using render().
 \begin{lstlisting}
-    # prop.py - PropManager 
-    def renderAllProps(self, view, renderingSystem):
-        for prop in self.allProps:
-            prop.render(view, renderingSystem)
+# prop.py - PropManager 
+def renderAllProps(self, view, renderingSystem):
+    for prop in self.allProps:
+        prop.render(view, renderingSystem)
 \end{lstlisting}
 
 \textbf{(3) Place in the world}
 With the PropManager defined the props can now be loaded in the world. The PropManager class needs to be imported and the variable created. Then, below were the g\_racer and g\_terrain are being assigned as instances of their corresponding class' and loaded, the same needs to be done for the props as g\_props.Additionally, all of the props also needed to be rendered, again in the same area as the g\_racer and g\_terrain variables are rendered.
     \begin{lstlisting}
-    #mega_racer.py
-    from prop import PropManager
-    ...
-    g_props = None
-    ....
-    g_props = PropManager()
-    g_props.loadAllProps(g_terrain)
-    ...
-    def renderFrame(...):
-            ...
-            g_props.renderAllProps(view, g_renderingSystem)
+#mega_racer.py
+from prop import PropManager
+...
+g_props = None
+....
+g_props = PropManager()
+g_props.loadAllProps(g_terrain)
+...
+def renderFrame(...):
+        ...
+        g_props.renderAllProps(view, g_renderingSystem)
     \end{lstlisting}
 
     \begin{figure} [H]
@@ -1151,14 +1184,15 @@ The most important area at an Olympics is the main Olympic Stadium where the ath
     \item Change the window title to "The Olympic Stadium Tour"
 
     \begin{lstlisting}
-window = glfw.create_window(g_startWidth, g_startHeight, "The Olympic Stadium Tour", None, None)
+window = glfw.create_window(g_startWidth, g_startHeight, 
+                                "The Olympic Stadium Tour", None, None)
 \end{lstlisting}
 \end{enumerate}
 
-\textbf{Blender:} In the process of changing elements in the mega\_racer world to reflect an Olympic stadium all of the object models (.obj and .mtl) needed to be either created or modified in blender. This was either because an appropriate free .obj file could not be found or was scaled incorrectly, and/or the .mtl file was missing or not correct. Some basics that needed to be learned to get started was scaling (\href{https://www.youtube.com/watch?v=FPp3ClfDYqI}{tutorial}) and rotating(\href{https://www.youtube.com/watch?v=NUy2O13QH68}{tutorial}).
+\textbf{Blender:} In the process of changing elements in the mega\_racer world to reflect an Olympic stadium all of the object models (.obj and .mtl) needed to be either created or modified in blender. This was either because an appropriate free .obj file could not be found or was scaled incorrectly, and/or the .mtl file was missing or not correct. Some basics that needed to be learned to get started was scaling [1] and rotating [2] tutorials.
 
 \subsection{Athlete}
-Instead of a race car driving around the track, I wanted to replace it with an athlete. A person is quite a complicated model to make from scratch so a premade .obj model of a basic person was sourced. The chosen model was \href{https://free3d.com/3d-model/male-base-mesh-6682.html}{this} free basic mesh male model uploaded by Paul Chen on free3d.com. The model is in a basic standing position with no texturing. For a more realistic model for the stadium, the model needed to be scaled appropriately and posed in a running position. Importing the .obj file in blender and following \href{https://www.youtube.com/watch?v=XHa2Y8zjtZQ}{this} basic rigging tutorial on YouTube by PIXXO 3D, a meta-rig was set up for the model. This basically entails lining up a bone framework, like a skeleton, to the model. One of the errors that occurred was was moving one of the spine bones on accident so that it was detached disallowing the meta-rig from generating, however it was solved from \href{https://blender.stackexchange.com/questions/169555/rigify-error-bone-cannot-connect-chain-bone}{this} post through the blender forum.
+Instead of a race car driving around the track, I wanted to replace it with an athlete. A person is quite a complicated model to make from scratch so a premade .obj model of a basic person was sourced. The chosen model was [35], a free basic mesh male model uploaded by Paul Chen. The model is in a basic standing position with no texturing. For a more realistic model for the stadium, the model needed to be scaled appropriately and posed in a running position. Importing the .obj file in blender and following a basic rigging tutorial on YouTube by PIXXO 3D [10], a meta-rig was set up for the model. This basically entails lining up a bone framework, like a skeleton, to the model. One of the errors that occurred was was moving one of the spine bones on accident so that it was detached disallowing the meta-rig from generating, however it was solved by reattaching the bones [40].
     \begin{figure} [H]
         \makebox[\textwidth]{%
         \includegraphics[width=0.49\textwidth, frame]
@@ -1170,7 +1204,7 @@ Instead of a race car driving around the track, I wanted to replace it with an a
         \caption{Racer - Blender - Base \& Rig}   
     \end{figure}
 
-Using this meta-rig, blender has a built-in feature that creates a rig that can be used to move the 'bones' around to place the model into poses. For the model, Ine leg needed to be lifted backward from the knee and point the foot down, and slightly lift the other foot and bend the knee slightly forward. The arms were moved in the same fashion with one arm back and the hand pointing down and the other arm forward with bend elbow and hand pointing up. Essentially, this put the model in a running pose.
+Using this meta-rig, blender has a built-in feature that creates a rig that can be used to move the 'bones' around to place the model into poses. For the model, one leg needed to be lifted backward from the knee and point the foot down, and slightly lift the other foot and bend the knee slightly forward. The arms were moved in the same fashion with one arm back and the hand pointing down and the other arm forward with bend elbow and hand pointing up. Essentially, this put the model in a running pose.
     \begin{figure} [H]
         \makebox[\textwidth]{
         \centering
@@ -1183,7 +1217,7 @@ Using this meta-rig, blender has a built-in feature that creates a rig that can 
         \caption{Racer - Blender - Posing}   
     \end{figure}
 
-Now that the athlete was in the running position, some texturing needed to be added. Sourcing images from Google, some textures were found that were appropriate for an athlete including Lycra and breathable material. However, since the model was set as all one material \href{https://www.youtube.com/watch?v=afjGodkdp4U}{this} tutorial on YouTube from Jayanam, made aware that vertex groups would be needed to be used in order to separate them into different sections. In this step, I would have liked to have learn to extrapolate the areas to give them definition and shape the areas to look as they should i.e. make the feet look like shoes. For this basic model, after creating the groups  they were able to be coloured separately by assigning the different materials (sourced image textures) to the groups as done by \href{https://www.youtube.com/watch?v=ZWJB7HaKJZY}{this} tutorial from Weisbrod Imaging on YouTube.
+Now that the athlete was in the running position, some texturing needed to be added. Sourcing images from Google, some textures were found that were appropriate for an athlete including Lycra and breathable material. However, since the model was set as all one material, vertex groups would be needed to be used in order to separate them into different sections by following a tutorial from Jayanam [7]. In this step, I would have liked to have learn to extrapolate the areas to give them definition and shape the areas to look as they should i.e. make the feet look like shoes. For this basic model, after creating the groups  they were able to be coloured separately by assigning the different materials (sourced image textures) to the groups as done by Weisbrod Imaging [14].
     \begin{figure} [H]
         \makebox[\textwidth]{%
         \includegraphics[width=0.15\textwidth, height=0.41\textheight, frame]
@@ -1197,9 +1231,9 @@ Now that the athlete was in the running position, some texturing needed to be ad
 
 The athlete was coming together. However, I really didn't like the dodgy colouring attempt so I decided to try and add clothing for more realistic texturing. The following free clothing models were found on turbosquid.com:
 \begin{itemize}
-    \item \textbf{Men Avatar Vest} by swatishr13: \href{https://www.turbosquid.com/FullPreview/Index.cfm/ID/1557152}{This} model was imported with no colouring associated. The trims on the sleeve were set as white and the main colour used the same 'top' texture as in the previous colouring. 
-    \item \textbf{short pants} by sazandra: \href{https://www.turbosquid.com/FullPreview/Index.cfm/ID/1434049}{This} file was able to be imported with all textures correctly. Since the model was in a running position, the pants were the wrong shape however the model used a mirror modify so the model was able to be split and just have half of the pants. This half of the pants were used as is and then duplicate was made with a mirror image of the local x and y coordinates that could be set at the right shape for the runner.
-    \item \textbf{shoe} by Bruno Dalla: \href{https://www.turbosquid.com/FullPreview/Index.cfm/ID/1217043}{This} model is of a single show so a duplicate mirrored on the local x was created. The associated texturing for this model didn't load correctly so the above 'shoe' texturing was used except for a trim around the bottom the same colour as the top.
+    \item \textbf{Men Avatar Vest} by swatishr13 [28]: This model was imported with no colouring associated. The trims on the sleeve were set as white and the main colour used the same 'top' texture as in the previous colouring. 
+    \item \textbf{short pants} by sazandra [29]: This file was able to be imported with all textures correctly. Since the model was in a running position, the pants were the wrong shape however the model used a mirror modify so the model was able to be split and just have half of the pants. This half of the pants were used as is and then duplicate was made with a mirror image of the local x and y coordinates that could be set at the right shape for the runner.
+    \item \textbf{shoe} by Bruno Dalla [22]: This model is of a single show so a duplicate mirrored on the local x was created. The associated texturing for this model didn't load correctly so the above 'shoe' texturing was used except for a trim around the bottom the same colour as the top.
 \end{itemize}
 
 
@@ -1240,32 +1274,34 @@ Since an Olympic Stadium is essentially a building, trees and rocks were note ap
 Additionally, the code for this section was updated as originally more models were planned to be included. This code is very similar to mega racer though handles more types of props. Other props that were considered were a podium, hurdles, Olympic flame and crowd members.
 
 \begin{lstlisting}
-    #mega_racer.py
-    propTypes = [['cone', 50, g_terrain.treeLocations], ["rings", 2, g_terrain.rockLocations]]
-    g_props.loadAllProps(propTypes)
-    
-    #prop.py
-    class PropManager: 
-        propTypes = []
-        allProps = []    
-    
-        def loadProp(self, propType):
-            propModel = ObjModel("data/{propName}/{propName}.obj".format(propName=propType[0]))
-            i = 0
-            while i < propType[1]:
-                prop = Prop()
-                prop.load(propModel, propType[2])         
-                i += 1
-                self.allProps.append(prop)
-    
-        def loadAllProps(self, propTypes):
-            self.propTypes = propTypes
-            for prop in self.propTypes:
-                self.loadProp(prop)
-    
-        def renderAllProps(self, view, renderingSystem):
-            for prop in self.allProps:
-                prop.render(view, renderingSystem)    
+#mega_racer.py
+propTypes = [['cone', 50, g_terrain.treeLocations], 
+            ["rings", 2, g_terrain.rockLocations]]
+g_props.loadAllProps(propTypes)
+
+#prop.py
+class PropManager: 
+    propTypes = []
+    allProps = []    
+
+    def loadProp(self, propType):
+        propModel = ObjModel("data/{propName}/{propName}.obj"
+                        .format(propName=propType[0]))
+        i = 0
+        while i < propType[1]:
+            prop = Prop()
+            prop.load(propModel, propType[2])         
+            i += 1
+            self.allProps.append(prop)
+
+    def loadAllProps(self, propTypes):
+        self.propTypes = propTypes
+        for prop in self.propTypes:
+            self.loadProp(prop)
+
+    def renderAllProps(self, view, renderingSystem):
+        for prop in self.allProps:
+            prop.render(view, renderingSystem)    
     \end{lstlisting}
 
     \begin{figure} [H]
@@ -1276,7 +1312,7 @@ Additionally, the code for this section was updated as originally more models we
     \end{figure}
         
 \subsubsection{Rings}
-It wouldn't be the Olympics without the iconic Olympic rings. Originally \href{https://www.cgtrader.com/free-3d-models/architectural/other/3d-olympic-rings}{this} model on cgtrader.com was sourced, however after trying to open it in blender not only were the set materials not working from the .mtl file but also the rings were connected and overlapping so I wasn't able to separate them out to colour them differently. They seemed simple enough to make myself so following \href{https://www.youtube.com/watch?v=yaWl43Z0QQk}{this} time-lapse video and sourcing my own textures for the rings to make a new model that could be used on the centre area of the stadium. Each ring is a torus that was reshaped slightly, coloured with the textures and then overlapped with the two bottom rings in front. 
+It wouldn't be the Olympics without the iconic Olympic rings. Originally a free model was sourced [21], however after trying to open it in blender not only were the set materials not working from the .mtl file but also the rings were connected and overlapping so I wasn't able to separate them out to colour them differently. They seemed simple enough to make myself so following a time-lapse video [4]and sourcing my own textures for the rings to make a new model that could be used on the centre area of the stadium. Each ring is a torus that was reshaped slightly, coloured with the textures and then overlapped with the two bottom rings in front. 
     \begin{figure} [H]
         \makebox[\textwidth]{%
         \includegraphics[width=0.15\textwidth, height=0.41\textheight, frame]
@@ -1289,7 +1325,7 @@ It wouldn't be the Olympics without the iconic Olympic rings. Originally \href{h
     \end{figure}
 
 \subsubsection{Cones}
-To demonstrate props that would be repeated on a large scale, safety cones were placed around the inside of the middle area of the stadium. Similar to the Olympic rings, \href{https://www.cgtrader.com/free-3d-models/exterior/street/cone-2b4a9172-7afb-4611-8e23-bdac1afe0b87}{various} models on cgtrader.com were found but the .mtl file was not correct for any of them, so I decided to create my own cones. Following \href{https://www.youtube.com/watch?v=vQ_1HU_-BJM}{this} tutorial a realistic traffic safety cone was created. The cone started as a cylinder, the top was reshaped for the cone appearance, the lip on the top was created, a base added, the strips added using loop cuts and finally the colouring applied.
+To demonstrate props that would be repeated on a large scale, safety cones were placed around the inside of the middle area of the stadium. Similar to the Olympic rings, various models [30] were found but the .mtl file was not correct for any of them, so I decided to create my own cones. Following a tutorial [8], a realistic traffic safety cone was created. The cone started as a cylinder, the top was reshaped for the cone appearance, the lip on the top was created, a base added, the strips added using loop cuts and finally the colouring applied.
     \begin{figure} [H]
         \centering
         \includegraphics[width=0.8\textwidth, frame]
@@ -1299,7 +1335,7 @@ To demonstrate props that would be repeated on a large scale, safety cones were 
 
 % MAP
 \subsection{Map}
-The current map does not resemble a stadium at all so I wanted to attempt to create my own map using Paint. The track needed to be to scale by using dimensions of \href{https://www.dimensions.guide/element/track-and-field-400m-running-track}{athletic track} and \href{https://hypertextbook.com/facts/2006/JamesKim.shtml}{stadium}. After trialling with a few image pixel sizes, I decided to optimise the RGB image quality by multiplying all measurements (in metres) by 2 pixels. Since Paint is very low quality using the original 128x128 caused too much interference with the 'smoothness' of the 'stadium' shape of the track, 1 to 1 scaling proved problematic with object models scaling and anything larger was too difficult to render. This was the happiest medium.
+The current map does not resemble a stadium at all so I wanted to attempt to create my own map using Paint. The track needed to be to scale by using dimensions of an athletic track [23] and stadium [31]. After trialling with a few image pixel sizes, I decided to optimise the RGB image quality by multiplying all measurements (in metres) by 2 pixels. Since Paint is very low quality using the original 128x128 caused too much interference with the 'smoothness' of the 'stadium' shape of the track, 1 to 1 scaling proved problematic with object models scaling and anything larger was too difficult to render. This was the happiest medium.
  
 \begin{figure} [H]
     \centering
@@ -1311,7 +1347,7 @@ The current map does not resemble a stadium at all so I wanted to attempt to cre
 The track needed the 400m athletic track, grass in the entire of this track and then 6 levels of seating each 10m in height. With the basic layout and dimensional shape of the stadium set. The RGB colouring needed to be applied. Using the same setup, blue denoted the main channel (max speed), green the locations of object models and red the height.
     \begin{figure} [H]
         \centering
-        \includegraphics[width=0.6\textwidth, frame]
+        \includegraphics[width=0.8\textwidth, frame]
             {./images/olympics/track_colours.PNG}  
         \caption{Track - RGB Colours}   
     \end{figure}
@@ -1325,23 +1361,23 @@ Combining all of these together following track was produced to represents a sta
     \end{figure}
 
     \begin{lstlisting}
-    #mega_racer.py    
-    g_terrain.load("data/track.png", g_renderingSystem);
+#mega_racer.py    
+g_terrain.load("data/track.png", g_renderingSystem);
 
-    # terrain.py
-    class Terrain:
-        xyScale = 2
-        heightScale = 60.0
+# terrain.py
+class Terrain:
+    xyScale = 2
+    heightScale = 60.0
 
-        ....
-        def load(...)
-            ...    
-            self.mapTexture = ObjModel.loadTexture("track.png", "data", False)
+    ....
+    def load(...)
+        ...    
+        self.mapTexture = ObjModel.loadTexture("track.png", "data", False)
     \end{lstlisting}
 
 \begin{figure} [H]
     \centering
-    \includegraphics[width=0.6\textwidth, frame]
+    \includegraphics[width=0.8\textwidth, frame]
         {./images/olympics/map_world.PNG}  
     \caption{Track - RGB Colours}   
 \end{figure}
@@ -1364,84 +1400,103 @@ Finally, the textures of the terrain needed to be updated to reflect an Olympic 
         \caption{Terrain - Textures}   
     \end{figure}
 
-\begin{lstlisting}
-    #mega_racer.py    
-    # terrain.py
-    class Terrain:
-        ...
-        textureXyScale = 0.25
-        ...
-        TU_Grass = 0
-        TU_Wall = 1
-        TU_Seats = 2
-        TU_Track = 3   
-        TU_Concrete = 5
-        ...
-        wallTexture = None
-        seatsTexture = None
-        trackTexture = None    
-        concreteTexture = None
-        ...
-        def render(...):
-            ...
-            lu.bindTexture(self.TU_Wall, self.wallTexture)
-            lu.setUniform(self.shader, "wallTexture", self.TU_Wall)
-            lu.bindTexture(self.TU_Seats, self.seatsTexture)
-            lu.setUniform(self.shader, "seatsTexture", self.TU_Seats)
-            lu.bindTexture(self.TU_Track, self.trackTexture)
-            lu.bindTexture(self.TU_Map, self.mapTexture)
-            lu.setUniform(self.shader, "trackTexture", self.TU_Track)
-            lu.setUniform(self.shader, "mapTexture", self.TU_Map)
-            lu.bindTexture(self.TU_Concrete, self.concreteTexture)
-            lu.setUniform(self.shader, "concreteTexture", self.TU_Concrete)
-            ...  
-        def load(...):
-            fragmentShader = """
-                ...
-                uniform sampler2D wallTexture;
-                uniform sampler2D seatsTexture;   
-                uniform sampler2D trackTexture;
-                uniform sampler2D mapTexture;
-                uniform sampler2D concreteTexture;
-                ...  
-                void main() 
-                void main() 
-                {
-                    vec3 materialColour = vec3(v2f_height/terrainHeightScale);
-                    // Default colour 
-                    vec3 concreteColour = texture(concreteTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                    materialColour = concreteColour;
-    
-                    // 2.1                 
-                    float slope = dot(v2f_worldSpaceNormal, vec3(v2f_worldSpaceNormal.x, 0.0, v2f_worldSpaceNormal.z)); //Steep 
-                    float blueChannel = texture(mapTexture, (v2f_worldSpacePosition.xy - v2f_xyOffset) * v2f_xyNormScale).z; //Road
-    
-                    // Track Texture
-                    if (blueChannel >= 0.9) {
-                        vec3 trackColour = texture(trackTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                        materialColour = trackColour;
-                    // Grass texture
-                    } else if (v2f_height < 1) {
-                        vec3 grassColour = texture(grassTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                        materialColour = grassColour; 
-                    // Wall/Banner texture
-                    } else if ((v2f_height < 11) && (slope < 0.2)) {
-                        vec3 wallColour = texture(wallTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                        materialColour = wallColour;                  
-                    // Seats
-                    } else if (slope < 0.2) {
-                        vec3 seatsColour = texture(seatsTexture, v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
-                        materialColour = seatsColour; 
-                    }
-                    vec3 reflectedLight = computeShading(materialColour, v2f_viewSpacePosition, v2f_viewSpaceNormal, viewSpaceLightPosition, sunLightColour);
-                    fragmentColor = vec4(toSrgb(applyFog(reflectedLight, -v2f_viewSpacePosition.z, cameraPosition, cameraToPointVector)), 1.0);
-                }
-            ...
-            self.wallTexture = ObjModel.loadTexture("banner.png", "data", True)
-            self.seatsTexture = ObjModel.loadTexture("seats.png", "data", True)
-            self.trackTexture = ObjModel.loadTexture("track.png", "data", True)
-            self.mapTexture = ObjModel.loadTexture("track_edit5.png", "data", False)
-            self.concreteTexture = ObjModel.loadTexture("concrete.jpg", "data", True)
+\begin{lstlisting} 
+# terrain.py
+class Terrain:
+    ...
+    textureXyScale = 0.25
+    ...
+    TU_Grass = 0
+    TU_Wall = 1
+    TU_Seats = 2
+    TU_Track = 3   
+    TU_Concrete = 5
+    ...
+    wallTexture = None
+    seatsTexture = None
+    trackTexture = None    
+    concreteTexture = None
+    ...
+
+# terrain.py  
+def render(...):
+    ...
+    lu.bindTexture(self.TU_Wall, self.wallTexture)
+    lu.setUniform(self.shader, "wallTexture", self.TU_Wall)
+    lu.bindTexture(self.TU_Seats, self.seatsTexture)
+    lu.setUniform(self.shader, "seatsTexture", self.TU_Seats)
+    lu.bindTexture(self.TU_Track, self.trackTexture)
+    lu.bindTexture(self.TU_Map, self.mapTexture)
+    lu.setUniform(self.shader, "trackTexture", self.TU_Track)
+    lu.setUniform(self.shader, "mapTexture", self.TU_Map)
+    lu.bindTexture(self.TU_Concrete, self.concreteTexture)
+    lu.setUniform(self.shader, "concreteTexture", self.TU_Concrete)
+    ...  
+def load(...):
+    ...
+    self.wallTexture = ObjModel.loadTexture("banner.png", "data", True)
+    self.seatsTexture = ObjModel.loadTexture("seats.png", "data", True)
+    self.trackTexture = ObjModel.loadTexture("track.png", "data", True)
+    self.mapTexture = ObjModel.loadTexture("track_edit5.png", "data", False)
+    self.concreteTexture = ObjModel.loadTexture("concrete.jpg", "data", True)
+
+# terrain.py 
+fragmentShader = """
+    ...
+    uniform sampler2D wallTexture;
+    uniform sampler2D seatsTexture;   
+    uniform sampler2D trackTexture;
+    uniform sampler2D mapTexture;
+    uniform sampler2D concreteTexture;
+    ...  
+    void main() 
+    void main() 
+    {
+        vec3 materialColour = vec3(v2f_height/terrainHeightScale);
+        // Default colour 
+        vec3 concreteColour = texture(concreteTexture, 
+                        v2f_worldSpacePosition.xy * terrainTextureXyScale).xyz;
+        materialColour = concreteColour;
+
+        // 2.1                 
+        float slope = dot(v2f_worldSpaceNormal, vec3(v2f_worldSpaceNormal.x, 0.0, 
+                                                v2f_worldSpaceNormal.z)); //Steep 
+        float blueChannel = texture(mapTexture, 
+                                    (v2f_worldSpacePosition.xy - v2f_xyOffset) 
+                                        * v2f_xyNormScale).z; //Road
+
+        // Track Texture
+        if (blueChannel >= 0.9) {
+            vec3 trackColour = texture(trackTexture, v2f_worldSpacePosition.xy 
+                                                    * terrainTextureXyScale).xyz;
+            materialColour = trackColour;
+        // Grass texture
+        } else if (v2f_height < 1) {
+            vec3 grassColour = texture(grassTexture, v2f_worldSpacePosition.xy 
+                                                    * terrainTextureXyScale).xyz;
+            materialColour = grassColour; 
+        // Wall/Banner texture
+        } else if ((v2f_height < 11) && (slope < 0.2)) {
+            vec3 wallColour = texture(wallTexture, v2f_worldSpacePosition.xy 
+                                                    * terrainTextureXyScale).xyz;
+            materialColour = wallColour;                  
+        // Seats
+        } else if (slope < 0.2) {
+            vec3 seatsColour = texture(seatsTexture, v2f_worldSpacePosition.xy 
+                                                    * terrainTextureXyScale).xyz;
+            materialColour = seatsColour; 
+        }
+        vec3 reflectedLight = computeShading(materialColour,  
+                                            v2f_viewSpacePosition, 
+                                            v2f_viewSpaceNormal, 
+                                            viewSpaceLightPosition, 
+                                            sunLightColour);
+        fragmentColor = vec4(toSrgb(applyFog(reflectedLight, 
+                                            -v2f_viewSpacePosition.z, 
+                                            cameraPosition, 
+                                            cameraToPointVector)), 1.0);
+    }
+
     \end{lstlisting}
 
 \begin{figure} [H]
@@ -1452,4 +1507,10 @@ Finally, the textures of the terrain needed to be updated to reflect an Olympic 
 \end{figure}
 
 
+\section{Conclusion}
+Throughout this project I have learnt, tested and successfully implemented a variety of Computer Graphics techniques to implement a basic version of the mega racer game and also a model of an Olympic Stadium. Concepts that were covered include coordinate systems, setting up a virtual camera, lighting, shading, texturing and modelling in Blender. All of the steps from the proposal were implemented except for structure of the stadium roof and its affect on shaping the lighting. There is always more than can be added and the next steps would be to create the roof using a cube mapping texture, more photorealistic skin texture on the athlete and a better visualisation of the stadium seating. Overall, an understanding of the gained knowledge of Computer Graphics concepts were demonstrated and communicated in this project.
+
+
+\includepdf[pages=1, pagecommand=\section{References}, offset=0 0cm]{references.pdf}
+\includepdf[pages=2-, offset=0 0cm]{references.pdf}
 \end{document}
