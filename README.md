@@ -7,8 +7,6 @@ In addition to the report a presentation was given providing an overview.
 [![video](readme_video.png)](https://youtu.be/X3s_5GrY3Jw)
 
 
-
-
 # MEGA RACER
 
 ## TIER 1
@@ -49,8 +47,8 @@ In addition to the report a presentation was given providing an overview.
 
 ### Props
 <p float="left">
-  <img src="./report/images/olympics/rings_blend.JPG" width="425" />
-  <img src="./report/images/olympics/cone_blend.JPG" width="425" /> 
+  <img src="./report/images/olympics/rings_blend.JPG" width="410" />
+  <img src="./report/images/olympics/cone_blend.JPG" width="410" /> 
 </p>
 
 ![Props](/report/images/olympics/props_world.PNG)
